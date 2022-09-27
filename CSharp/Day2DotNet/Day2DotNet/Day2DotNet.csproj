@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraysEg.cs" />
     <Compile Include="Boxing_Unboxing.cs" />
     <Compile Include="NullableEg.cs" />
     <Compile Include="Program.cs" />

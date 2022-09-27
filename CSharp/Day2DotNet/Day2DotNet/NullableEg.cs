@@ -29,8 +29,14 @@ namespace Day2DotNet
         public void nullcoalescingFunc()
         {
             int ? TicketsOnSale = 200;
-            int AvailableTickets = TicketsOnSale ?? 0;
-            Console.WriteLine("Available Tickets is {0}",AvailableTickets);           
+            int AvailableTickets = TicketsOnSale ==null ? 0 : (int)TicketsOnSale; //or
+            AvailableTickets = TicketsOnSale == null ? 0 : TicketsOnSale.Value; //or
+            AvailableTickets = TicketsOnSale ?? 0;
+            Console.WriteLine("Available Tickets is {0}",AvailableTickets);
+           
+            
+          
+
 
         }
     }

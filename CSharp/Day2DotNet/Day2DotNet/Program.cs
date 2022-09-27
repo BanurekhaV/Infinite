@@ -14,9 +14,11 @@ namespace Day2DotNet
             //program.conversionfunc();
             //program.tryparsefunc();
             //program.Ternaryfunc();
-            NullableEg.nullableFunc();
-            NullableEg neg = new NullableEg();
-            neg.nullcoalescingFunc();
+            //NullableEg.nullableFunc();
+            //NullableEg neg = new NullableEg();
+            //neg.nullcoalescingFunc();
+            ArraysEg arrayeg = new ArraysEg();
+            arrayeg.ArrayFunctions();
             Console.Read();
         }
         #region
