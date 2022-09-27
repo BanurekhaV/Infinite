@@ -18,7 +18,18 @@ namespace Day2DotNet
             //NullableEg neg = new NullableEg();
             //neg.nullcoalescingFunc();
             ArraysEg arrayeg = new ArraysEg();
-            arrayeg.ArrayFunctions();
+            //arrayeg.ArrayFunctions();
+            arrayeg.TwoDimensionalArray();
+            //DecisionMaking dm = new DecisionMaking();
+            //dm.CheckGrade();
+            //dm.CheckGradeWithSwitch();
+            //Loops loops = new Loops();
+            //Console.WriteLine("-------Do While-------");
+            //loops.DoWhile();
+            //Console.WriteLine("---------For Loop ----");
+            //loops.ForLoop();
+            //Console.WriteLine("--------While Loop----");
+            //loops.WhileLoop();
             Console.Read();
         }
         #region
