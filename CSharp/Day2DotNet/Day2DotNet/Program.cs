@@ -13,6 +13,7 @@ namespace Day2DotNet
         {
             int x = 10;
 
+            //the below is to understand the primitive data type being represented as class type
             //  Console.WriteLine("Minimum Value of an Integer is {0}",int.MinValue);
             // Console.WriteLine("Maximum Value :{0}",int.MaxValue);
             //  float f = x; //implicit conversion
