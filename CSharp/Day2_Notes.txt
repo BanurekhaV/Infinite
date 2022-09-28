@@ -12,7 +12,14 @@ Debugging : Break Point
 Arrays : Continuos memory allocation of a single datatype
 
   Decision making  - if else, switch
+
+ Jump Statements : break, continue, goto, return, throw etc..
+
   Iterations - loops (do.. while, while ..do, for, foreach)
+
+initialization
+condition
+increment or decrement (to change the condition and terminate the loop)
 
 int [] arr= new int[5];
 arr[0]=50; arr[1]=56;  .... arr[4]=80;

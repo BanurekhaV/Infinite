@@ -19,7 +19,8 @@ namespace Day2DotNet
             //neg.nullcoalescingFunc();
             ArraysEg arrayeg = new ArraysEg();
             //arrayeg.ArrayFunctions();
-            arrayeg.TwoDimensionalArray();
+           // arrayeg.TwoDimensionalArray();
+            arrayeg.JaggedArrayFunction();
             //DecisionMaking dm = new DecisionMaking();
             //dm.CheckGrade();
             //dm.CheckGradeWithSwitch();
