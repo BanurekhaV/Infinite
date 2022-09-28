@@ -82,6 +82,7 @@ namespace Day2DotNet
             // x = int.Parse(str); //throws exception
             int res;
             bool status = int.TryParse(str, out res);
+            
             if (status == true)  //if success is true
             {
                 Console.WriteLine("The parsed/converted data is {0}", res);
