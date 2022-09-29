@@ -16,4 +16,11 @@ Constructors : Are special functions of a class
 - They are used to initialize fields
 - They are called during object creation
 
+Destructors: Is a special function of a class(only one/class)
+- It has the same name as that of the class, but preceded with a tilde(~) symbol
+- It cannot have return types
+- It cannot be overloaded
+- It deallocates the object and hence the memory
+- We cannot call them
+
 When a class does not have a constructor of its own, the system provides a default constructor

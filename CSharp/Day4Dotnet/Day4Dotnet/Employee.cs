@@ -14,7 +14,7 @@ namespace Day4Dotnet
           float Empsal;
         //constructors
         // 1. empty constructor
-       internal Employee()
+        internal Employee()
         {
             int myvar = 100;
             Console.WriteLine(myvar);
@@ -31,10 +31,16 @@ namespace Day4Dotnet
         }
 
         //3.
-        public Employee(int eid, string ename)
+        public Employee(int Empid, string EmpName)
         {
-            Empid = eid;
-            EmpName = ename;
+            this.Empid = Empid;
+            this.EmpName = EmpName;
+        }
+        //4.
+        public Employee(string Ename, int e)
+        {
+            this.Empid = e;
+            this.EmpName = Ename;
         }
         //methods/functions
         public void AcceptEmployee()
@@ -48,20 +54,31 @@ namespace Day4Dotnet
         {
             Console.WriteLine($"Employee Name : {EmpName}, Employeeid :{Empid}, draws a salary of :{Empsal}");
         }
-
+        //destructor
+        ~Employee()
+        {
+            Console.WriteLine("Bye from Employee");
+            Console.Read();
+        }
     }
-
     class DriverClass
     {
         static void Main()
         {
-            Employee employee = new Employee(); //default constructor provided by the framework
+            Employee e = new Employee(); //default constructor provided by the framework
             // Console.WriteLine(employee.Empid + " "+employee.EmpName+ " "+employee.Empsal);
-            employee.DisplayEmpDetails();
+            e.DisplayEmpDetails();
+            
             Employee e1 = new Employee(101, "Anushree");
             e1.DisplayEmpDetails();
             Employee e2 = new Employee(200, "Tejaswi", 35000);
             e2.DisplayEmpDetails();
+            Employee e3 = new Employee("Varsha",2);
+            e3.DisplayEmpDetails();
+            e = null;
+            e1 = null;e2 = null;e3 = null;
+            GC.Collect();
+            //e.DisplayEmpDetails(); //throws nullreference exception
             Console.Read();
         }
     }
