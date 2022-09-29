@@ -1,0 +1,19 @@
+implicitly typed :
+
+var : We need to assign a value to a var type while declaring itself. Once assigned cannot change the type
+
+dynamic : An object that remains dynamic, but can take up any type and convert at the runtime. It has an overhead on Performance. Hence to limit usage of dynamic type. 
+
+Classes and Objects : Class is a unit of all field and methods needed for the application.
+
+Objects : are the instances of the class, which are real and workable.
+
+Constructors : Are special functions of a class
+- They have the same name as that of the class
+- They have to be public or internal
+- They do not have any return type
+- They can be overloaded
+- They are used to initialize fields
+- They are called during object creation
+
+When a class does not have a constructor of its own, the system provides a default constructor
