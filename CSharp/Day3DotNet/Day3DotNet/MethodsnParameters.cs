@@ -90,8 +90,9 @@ namespace Day3DotNet
         }
 
         public string SampleFunc(string s1, string s2)
-        {                   
-            return s1;
+        {
+            string res=String.Concat(s1, s2);
+            return res;
         }
     }
 }
