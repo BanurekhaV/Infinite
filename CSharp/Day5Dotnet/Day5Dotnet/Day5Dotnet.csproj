@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63784357-4CC6-44FC-B55F-15CD4BB07243}</ProjectGuid>
+    <ProjectGuid>{538DD071-E627-4195-8E21-3E35D2577442}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day4Dotnet</RootNamespace>
-    <AssemblyName>Day4Dotnet</AssemblyName>
+    <RootNamespace>Day5Dotnet</RootNamespace>
+    <AssemblyName>Day5Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,13 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day4Dotnet.DriverClass</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Day4DotNet_Prj2">
-      <HintPath>..\Day4DotNet_Prj2\bin\Debug\Day4DotNet_Prj2.exe</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessSpecifiersEg.cs" />
-    <Compile Include="Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

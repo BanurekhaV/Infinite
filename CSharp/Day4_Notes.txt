@@ -24,3 +24,14 @@ Destructors: Is a special function of a class(only one/class)
 - We cannot call them
 
 When a class does not have a constructor of its own, the system provides a default constructor
+
+-- Class Members are private by Default
+-- Classes are internal by default
+Access Specifiers : 
+1. private : Accessible only in the class where it is declared
+             Not Accessible anywhere else
+2. public :  Accessible anywhere (within the assembly or other assemblies with or without derivation). But is accessible only with the object
+3. internal : It acts exactly like a public specifier, but allows access only within the same assembly.
+4. protected : Protected members of class are accessible within class, and all its derived classes irrespective of the assembly, where they are
+5. internal protected or protected internal :  Is a combination of both internal and protected. It is accessible in all the classes of the same assembly, whether or not we derive the class where internal protected is declared. It acts like protected outside the assembly if we derive.
+

@@ -1,4 +1,4 @@
-1. Create a class called Accounts which has data members like Account no, Customer name, Account type, Transaction type (d/w), amount, balance
+1. Create a class called Accounts which has data members(fields) like Account no, Customer name, Account type, Transaction type (d/w), amount, balance
 D->Deposit
 W->Withdrawal
 

@@ -21,4 +21,13 @@ namespace Day4DotNet_Prj2
             Console.Read();
         }
     }
+
+    class Outsider
+    {
+        public void outsiderfunc()
+        {
+            AccessSpecifiersEg a = new AccessSpecifiersEg();
+            a.publicmember = 8;
+        }
+    }
 }
