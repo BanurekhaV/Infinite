@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day5Dotnet.PropertiesEg</StartupObject>
+    <StartupObject>Day5Dotnet.InheritanceEg1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InheritanceEg1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

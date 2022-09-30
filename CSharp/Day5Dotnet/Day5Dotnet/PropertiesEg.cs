@@ -12,6 +12,12 @@ namespace Day5Dotnet
         private string Name = "Dont Know";
         private int age = 0;
 
+        //Automatic Properties
+        public string Id { get; }
+        public string City { get; set; }
+        public double Salary { get; }
+
+        //Manual property implementation
         //declare property for RollNo
         public string Code
         {
@@ -42,13 +48,14 @@ namespace Day5Dotnet
             Console.WriteLine(student.Code + " " +student._Name + " " + student.Age);
             student.Code = null;
             student._Name = "JamesBond";
-            student.Age =65;
+            student.Age=55;
             Console.WriteLine(student.Code + " " + student._Name + " " + student.Age);
-          //  Console.WriteLine("Enter Code, Name and Age :");
-          ////  student.Code = Console.ReadLine();
-          //  student._Name = Console.ReadLine();
-          //  student.Age = Convert.ToInt32(Console.ReadLine());
-          //  Console.WriteLine(student.Code + " " + student._Name + " " + student.Age);
+            //  Console.WriteLine("Enter Code, Name and Age :");
+            ////  student.Code = Console.ReadLine();
+            //  student._Name = Console.ReadLine();
+            //  student.Age = Convert.ToInt32(Console.ReadLine());
+            //  Console.WriteLine(student.Code + " " + student._Name + " " + student.Age);
+           // Console.WriteLine(student.ToString());
             Console.Read();
         }
     }
