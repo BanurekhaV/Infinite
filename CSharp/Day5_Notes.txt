@@ -22,3 +22,8 @@ II Properties: Are named members of the class, structures and interfaces
                They can be accessed using the accessors by which you can read or write values of the private fields 
                Properties do not name the storage locations. Instead they have accessors(get and set) that read, write or compute values
  
+
+OOPS - 1. Encapsulation - Combining Data and the Function together as a Unit
+       2. Abstraction -  Exposing only the required members and hiding the not required details/implementations/data
+       3. Inheritance - A provision for extension 
+       4. Polymorphism - Exhibiting multiple traits
