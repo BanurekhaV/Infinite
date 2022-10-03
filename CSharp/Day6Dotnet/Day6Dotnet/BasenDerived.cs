@@ -51,9 +51,7 @@ namespace Day6Dotnet
         {
             Child child = new Child(5); //first constructor
             Child child2 = new Child(10, 15);
-            //creating object of car and instatntiating engine properties 
-            Car mycar = new Car("SUV","Maruthi",100,"Excellent");
-            mycar.ShowCar();
+           
             Console.Read();
         }
     }
