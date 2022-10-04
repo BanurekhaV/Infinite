@@ -26,9 +26,31 @@ Eg :  public int add (int a, int b) { return a+b; }
       public int add(int a, float f){ }
       public float add(int a, int b) { } - not an overload
 
-
- CoVariance : Parent Object can point to any child object, but the reverse is not true 
-
+ 
 Method Overriding :- Signature has to be the same across overridden functions/methods
 - Seen across base and derived classes
 - Runtime does the binding
+
+
+CoVariance : Parent Object can point to any child object, but the reverse is not true 
+
+
+
+Types of Classes :
+1. Internal Classes / public Classes
+2. Abstract Classes : Cannot be instantiated. Has to be inherited. Will have atleast one Abstract Method. Can have non-abstract methods also.
+3. Sealed Classes : Concrete Classes /Final classes. They cannot be inherited. Can Instantiate and use it 
+4. Static Classes
+5. Partial Classes
+
+
+Abstract Method: Is a method that does not have definition/implementation/body for the method. Has only the declaration
+
+Interface : are like classes, especially abstract class. The difference being abstract classes can have non-abstract methods, but interfaces cannot.
+-Interfaces can have properties
+- Cannot be instantiated, but can use reference variables
+- Interfaces have to be inherited and implemented by child classes
+- All functions declared in the interface have to be implemented by the derived/sub class, whether you need it or not.
+- One class can inherit from more than one interface 
+- One interface can inherit from other interface/s
+- Interface members are public by default
