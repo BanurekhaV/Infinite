@@ -66,7 +66,7 @@ namespace Day6Dotnet
         static void Main()
         {
             Rectangle r = new Rectangle();
-            r.GetLB();
+            r.GetLB(); //go to line no 31
             Console.WriteLine("Area of Rect :{0}",r.Area());
             Console.WriteLine("Perimeter of Rect :{0}",r.Circumference());
             Circle c = new Circle();

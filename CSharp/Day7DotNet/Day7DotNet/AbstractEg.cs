@@ -10,6 +10,7 @@ namespace Day7DotNet
     {
         //declaring abstract method with asbtract modifier, without definition
           abstract public int Area();
+       // abstract public float CalculatePercentage(float val);
 
         //non abstract method with definition
         public void Display()
@@ -30,13 +31,23 @@ namespace Day7DotNet
             return side * side;
         }
     }
-    class AbstractEg 
+
+    sealed class finalclass
+    {
+        public void Message()
+        {
+            Console.WriteLine("This is Message");
+        }
+    }
+    class AbstractEg  
     {
         static void Main()
         {
             Shapeclass sc = new SquareClass(4);
             Console.WriteLine(sc.Area());
             sc.Display();
+            finalclass fc = new finalclass();
+            fc.Message();
             Console.Read();
         }
     }

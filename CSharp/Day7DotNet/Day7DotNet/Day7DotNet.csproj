@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day7DotNet.AbstractEg</StartupObject>
+    <StartupObject>Day7DotNet.Array2d</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractEg.cs" />
+    <Compile Include="Array2d.cs" />
     <Compile Include="Dynamic_Polymorphism.cs" />
+    <Compile Include="ICustomer.cs" />
     <Compile Include="OperatorOverload.cs" />
     <Compile Include="MethodOverload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
