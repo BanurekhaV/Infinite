@@ -1,0 +1,34 @@
+Polymorphism : 
+1. Static Polymorphism/Early Binding/Compile Time Polymorphism
+
+    - Overloading
+           a)Method Overloading
+           b)Operator Overloading
+
+2. Dynamic Polymorphism/Late Binding/Runtime Polymorphism
+          a)Overriding
+
+
+Binding : Resolving the function calls to the actual functions
+
+Method Overloading: -Having different methods with the same name but different arguments/parameters (Signature)
+- Either the number of parameters or the type of the parameters should be different
+- Seen within the class
+- Just the change of the return type does not qualify the method as overloaded
+- Compiler does Binding
+
+Operator Overloading: int x,y,z; z=x+y;
+
+class class1 {} class1 c1, c2, c3; c3=c1+c2;
+
+Eg :  public int add (int a, int b) { return a+b; }
+      public int add(int a, int b, int c) { }
+      public int add(int a, float f){ }
+      public float add(int a, int b) { } - not an overload
+
+
+ CoVariance : Parent Object can point to any child object, but the reverse is not true 
+
+Method Overriding :- Signature has to be the same across overridden functions/methods
+- Seen across base and derived classes
+- Runtime does the binding
