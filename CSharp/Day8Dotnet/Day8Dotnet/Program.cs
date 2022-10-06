@@ -17,16 +17,38 @@ namespace Day8Dotnet
                 a = Convert.ToInt32(Console.ReadLine());
                 b = Convert.ToInt32(Console.ReadLine());
                 c = a / b;
+                int[] arr1 = { 2, 4, 6, 8 };
+                Console.WriteLine(arr1[4]);
                 Console.WriteLine(c);
                 Console.Read();
             }
-            catch(FormatException fe)
+            catch (FormatException fe)
             {
-                Console.WriteLine(fe.Message);
+                Console.WriteLine(fe.Message + " " + fe.Source + " " + fe.StackTrace);
                 Console.WriteLine("Please enter only numbers");
+                Console.ReadKey();
+            }
+            catch (DivideByZeroException de)
+            {
+                Console.WriteLine(de.Message);
                 Console.Read();
-            }          
-
-        }
+            }
+            catch (IndexOutOfRangeException ie)
+            {
+                Console.WriteLine("Trying to read data beyond scope");
+                //Console.Read();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                //  Console.WriteLine("Something went wrong.. try again after sometime");
+                Console.Read();
+            }
+            finally
+            {
+                Console.WriteLine("Reached Finally Block");
+                Console.Read();
+            }
+        }               
     }
 }
