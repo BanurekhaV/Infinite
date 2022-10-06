@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace Day7DotNet
 {
-    interface ICustomer   //prefix I for interface
+    interface IGrandCustomer
+    {
+        void Funfunc();
+    }
+    interface ICustomer :IGrandCustomer  //prefix I for interface
     {
         void Print();  //only decl.
         int EvenNo(int x);
     }
 
-    interface ICustomer1
+    interface ICustomer1 : ICustomer
     {
         void Show();
     }
    
-    class Customer : ICustomer,ICustomer1
+    class Customer : ICustomer1
     {
         public void Print()
         {
@@ -30,10 +34,14 @@ namespace Day7DotNet
             else
                 return 0;
         }
-
         public void Show()
         {
             Console.WriteLine("ICustomer Show Implementation");
+        }
+
+        public void Funfunc()
+        {
+            Console.WriteLine("Fun Function");
         }
     }
     class Tester
