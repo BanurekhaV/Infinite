@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83CDC6BC-2C68-4F0C-BF68-DDB978699903}</ProjectGuid>
+    <ProjectGuid>{50FFD2CA-1CA9-4C11-B704-253BF6CA899E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day7DotNet</RootNamespace>
-    <AssemblyName>Day7DotNet</AssemblyName>
+    <RootNamespace>Day8Dotnet</RootNamespace>
+    <AssemblyName>Day8Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day7DotNet.InterfaceEg3</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractEg.cs" />
-    <Compile Include="Array2d.cs" />
-    <Compile Include="Dynamic_Polymorphism.cs" />
-    <Compile Include="ExplicitInterfaceEg.cs" />
-    <Compile Include="ICustomer.cs" />
-    <Compile Include="InterfaceEg3.cs" />
-    <Compile Include="OperatorOverload.cs" />
-    <Compile Include="MethodOverload.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
