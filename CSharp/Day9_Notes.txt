@@ -45,12 +45,27 @@ Stacks : Last in - First out (LIFO)
 Queues : Fisrt in - First out (FIFO)
 
 
+Generics: Collections that allows to create classes and methods decoupled with Data types
+- Are a way to let us define type-safe classes without compromising  
+                       - type safety
+                       - performance
+                       - productivity
+List<T>  - T stands for a template which is a data type
+
+Collection           Generic
+
+Arraylist --------- List 
+Hashtable --------- Dictionary
+
+
 Dynamic Link Libraries: DLL's : Are library assemblies that are created once and used manytimes.
 - It is a set of classes and functions
 - They cannot be executed directly.
 - They need a host to test and execute the functionalities of the DLL (eg : an exe)
 - They have to be referenced in the application/assembly that wants to use the DLL, create objects and 
 call the functions
+
+
 
 
 
