@@ -5,3 +5,6 @@ C:\Banu\Infinite\CSharp\Day9Dotnet\Day9Dotnet\obj\Debug\Day9Dotnet.csproj.Assemb
 C:\Banu\Infinite\CSharp\Day9Dotnet\Day9Dotnet\obj\Debug\Day9Dotnet.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\CSharp\Day9Dotnet\Day9Dotnet\obj\Debug\Day9Dotnet.exe
 C:\Banu\Infinite\CSharp\Day9Dotnet\Day9Dotnet\obj\Debug\Day9Dotnet.pdb
+C:\Banu\Infinite\CSharp\Day9Dotnet\Day9Dotnet\bin\Debug\ClassLibrary1.dll
+C:\Banu\Infinite\CSharp\Day9Dotnet\Day9Dotnet\bin\Debug\ClassLibrary1.pdb
+C:\Banu\Infinite\CSharp\Day9Dotnet\Day9Dotnet\obj\Debug\Day9Dotnet.csproj.CopyComplete

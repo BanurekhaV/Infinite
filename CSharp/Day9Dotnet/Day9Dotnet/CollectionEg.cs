@@ -61,10 +61,86 @@ namespace Day9Dotnet
             }
         }
 
+        public void HashTableEg()
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("E002", "Aishwarya");
+            ht.Add("E008", "Raajesh");
+            ht.Add("E003", "Brahmaji");
+            ht.Add("E001", "Tejaswi");
+            ht.Add(10, "Anushree");
+            ht.Add("E100", null);
+            ht.Add("E005", "Tejaswi");
+           //iterate thru the keys
+           foreach(var s in ht.Keys)
+            {
+                Console.WriteLine(s);
+            }
+            //iterate thru values
+            foreach (var s in ht.Values)
+            {
+                Console.WriteLine(s);
+            }
+            //in order to iterate the entire object to get both keya and values
+            //we need to use an variable of DictionaryEntry structure
+            foreach(DictionaryEntry de in ht)
+            {
+                Console.Write(de.Key + " ");
+                Console.Write(de.Value);
+                Console.WriteLine();
+            }
+            //Hashtables are used for serach operations
+            Console.WriteLine("---------------");
+            Console.WriteLine("Enter a Key to Search:");
+            string empid = Console.ReadLine();
+            if(ht.ContainsKey(empid))
+            {
+                Console.WriteLine(empid + " =" +ht[empid]);
+            }
+            else
+                Console.WriteLine(empid  + "Does not exists");
+        }
+
+        public void SortedListEg()
+        {
+            SortedList slist = new SortedList();
+            slist.Add("ora", "Oracle");
+            slist.Add("vb", "Visual Basic");
+            slist.Add("cs", "CSharp");
+            slist.Add("asp", "ASP.net");
+
+            foreach(DictionaryEntry d in slist)
+            {
+                Console.Write(d.Key + " " + d.Value);
+                Console.WriteLine();
+            }
+        }
+
+        public void StacksEg()
+        {
+            Stack st = new Stack();
+            st.Push("AA");
+            st.Push(2);
+            st.Push('S');
+            foreach(object o in st)
+            {
+                Console.WriteLine(o);
+            }
+            Console.WriteLine(st.Peek());
+            st.Pop();
+            Console.WriteLine(st.Peek());
+            foreach (object o in st)
+            {
+                Console.WriteLine(o);
+            }
+        }
         public static void Main()
         {
             CollectionEg ceg = new CollectionEg();
-            ceg.ArrayListEg();
+            // ceg.ArrayListEg();
+            // ceg.HashTableEg();
+            //ceg.SortedListEg();
+            ceg.StacksEg();
             Console.Read();
         }
     }
