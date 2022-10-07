@@ -76,7 +76,6 @@ namespace Day9Dotnet
             //printing from overloaded indexers (get)
             Console.WriteLine(ieg[1.0f] + "  " + ieg["2"] + "  " + ieg['a']);
 
-            
             ieg[0.0] = 56;
             ieg[1.0] = 70;
             ieg[2.0] = 76;

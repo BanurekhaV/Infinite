@@ -15,7 +15,7 @@ namespace Day9Dotnet
             arrlist.Add(35.45f);
             arrlist.Add('S');
             arrlist.Add(55.50);
-
+           
             foreach(var val in arrlist)
             {
                 Console.WriteLine(val);
