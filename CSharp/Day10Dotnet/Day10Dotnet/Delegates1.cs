@@ -32,6 +32,8 @@ namespace Day10Dotnet
             //or
             gd.Invoke("Hi ! Welcome to Delegates of C#");
             Delegates1 d = new Delegates1();
+            d.Show("Direct Call..");         
+            Display("hello");
             gd = new GreetingsDelegate(d.Show);
             gd("Hi Show Method..");
             Console.Read();

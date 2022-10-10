@@ -1,0 +1,28 @@
+Generics with objects
+
+Generic Constraints : are restrictions for the Generic Object
+
+Hands On:
+Create a class <anyname>. Inside the class have a public method called Display as below
+
+public void Display<T>(string msg, T Val)
+{
+cw("{0} :{1}", msg, Val);
+}
+
+now instantiate the class and call the Display method with different data types
+
+
+Delegates : - A Reference Type that holds the reference to a Method/Function
+- They are like Pointers to Functions/Methods
+- Their reference can be changed dynamically
+- We should declare delegates with signature
+- The delegate object can refer to methods whose signature matches with the delegate
+
+Delegates are essentially used to implements events and in callbacks
+
+
+Multicast Delegates : A concept where a single object of the delegate can be pointing to multiple functions (same signature ). The same object will refer to all the multiple functions one at a time in the order of functions added.
+
+Multicasting is not recommended when the functions return values and we need the return values for further processing, since the retun values or over written 
+

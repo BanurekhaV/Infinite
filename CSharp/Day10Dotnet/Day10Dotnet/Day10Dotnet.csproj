@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day10Dotnet.Delegates1</StartupObject>
+    <StartupObject>Day10Dotnet.EventsEg1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,8 +48,12 @@
   <ItemGroup>
     <Compile Include="AllGenericsEg.cs" />
     <Compile Include="Delegates1.cs" />
+    <Compile Include="Delegates2.cs" />
     <Compile Include="Employees.cs" />
     <Compile Include="EnumerablevsEnumerator.cs" />
+    <Compile Include="EventsEg1.cs" />
+    <Compile Include="MulticastDelegates.cs" />
+    <Compile Include="MulticastingDelegates_WithReturnValue.cs" />
     <Compile Include="OurProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
