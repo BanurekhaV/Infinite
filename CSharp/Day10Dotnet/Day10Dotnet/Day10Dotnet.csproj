@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E1B3B79-82C9-418D-9B14-A77501BD8A75}</ProjectGuid>
+    <ProjectGuid>{215BEBE8-1F16-43F8-A93C-1F80B3CB4DE3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day9Dotnet</RootNamespace>
-    <AssemblyName>Day9Dotnet</AssemblyName>
+    <RootNamespace>Day10Dotnet</RootNamespace>
+    <AssemblyName>Day10Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,12 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day9Dotnet.Test</StartupObject>
+    <StartupObject>Day10Dotnet.DriverClass</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClassLibrary1">
-      <HintPath>..\ClassLibrary1\bin\Debug\ClassLibrary1.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,11 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CollectionEg.cs" />
-    <Compile Include="GenericListEg.cs" />
-    <Compile Include="IndexersEg.cs" />
+    <Compile Include="AllGenericsEg.cs" />
+    <Compile Include="Employees.cs" />
+    <Compile Include="OurProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestingDll.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
