@@ -26,3 +26,19 @@ Multicast Delegates : A concept where a single object of the delegate can be poi
 
 Multicasting is not recommended when the functions return values and we need the return values for further processing, since the retun values or over written 
 
+Events: Publisher - Subscriber Model
+
+Publisher - the class that raises the event
+Subscriber - the class that handles the event
+
+One event can have multiple subscribers
+one subscriber can handle events from multiple publishers
+
+-The events are declared and raised in a class and associated with evenet handlers using delegates within the same class or some other class. The class containing the event is used to publish the event
+
+- Another class that accepts the event is called as subscriber. This object provides event handlers
+
+- A publisher is an object that contains the definition of the event and the delegate. The event-delegate association is also defined in this object. A publisher class object invokes the Event and it notifies to other objects(subscribers)
+
+series of activities : user-->events-->delegates-->functions
+
