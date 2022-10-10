@@ -32,6 +32,10 @@ namespace Day10Dotnet
 
     class DriverClass
     {
+        public void Display<T>(string msg, T val)
+        {
+            Console.WriteLine("{0} : {1}", msg,val);
+        }
         static void Main()
         {
             //object initialized with int value type
@@ -45,7 +49,14 @@ namespace Day10Dotnet
             //object initialized with user defined reference type
             AllGenericsEg<Employees> allgenericemp = new AllGenericsEg<Employees>(new Employees(1,"A",1000));
             Employees e = new Employees(5, "Banurekha", 10000);
-            Console.WriteLine(allgenericemp.genericMethod(e)); 
+            Console.WriteLine(allgenericemp.genericMethod(e));
+
+            //hands on example
+            DriverClass driverclass = new DriverClass();
+            driverclass.Display<int>("Integer Data", 12);
+            driverclass.Display<float>("Real number", 350.55f);
+            driverclass.Display<char>("Character Data", 'b');
+           
             Console.Read();
         }
     }

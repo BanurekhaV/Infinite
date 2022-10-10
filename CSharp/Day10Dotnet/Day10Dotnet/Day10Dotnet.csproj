@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day10Dotnet.DriverClass</StartupObject>
+    <StartupObject>Day10Dotnet.Delegates1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllGenericsEg.cs" />
+    <Compile Include="Delegates1.cs" />
     <Compile Include="Employees.cs" />
+    <Compile Include="EnumerablevsEnumerator.cs" />
     <Compile Include="OurProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
