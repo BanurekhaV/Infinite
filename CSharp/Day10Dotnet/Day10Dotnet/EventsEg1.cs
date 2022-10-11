@@ -32,7 +32,7 @@ namespace Day10Dotnet
         static void Main()
         {
             EventsEg1 eventseg = new EventsEg1();
-            string welcomemsg = eventseg.myevent("Infinite");
+            string welcomemsg = eventseg.myevent("Infinite"); //raising the event
             Console.WriteLine(welcomemsg);
             Console.Read();
         }

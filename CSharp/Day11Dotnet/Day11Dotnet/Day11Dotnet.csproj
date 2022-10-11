@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day11Dotnet.FilesnDirectoriesEg</StartupObject>
+    <StartupObject>Day11Dotnet.FilesEg2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="EventsEg2.cs" />
     <Compile Include="FilesEg1.cs" />
+    <Compile Include="FilesEg2.cs" />
     <Compile Include="FilesnDirectoriesEg.cs" />
     <Compile Include="MultiThreadEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

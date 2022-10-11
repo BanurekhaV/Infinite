@@ -35,3 +35,14 @@ Files and Serialization : Various class are supported in DotNet Framework to rea
 
 - FileInfo - to read all files
 - DirectoryInfo - to read files from a directory
+
+Serialization : is a process of bringing an object into a form that can be written on a stream. Or it is a process of converting an object into a form, so that it can be stored on a file,database, memory or transferred across network
+
+Deserialization : is a reverse process of Serialization
+
+
+Types : 
+ 1. Binary Serialization
+ 2. SOAP Serialization
+ 3. XML Serialization
+ 4. JSON Serialization
