@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day11Dotnet.ThreadLock</StartupObject>
+    <StartupObject>Day11Dotnet.FilesnDirectoriesEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventsEg2.cs" />
+    <Compile Include="FilesEg1.cs" />
+    <Compile Include="FilesnDirectoriesEg.cs" />
     <Compile Include="MultiThreadEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleThreadEg.cs" />

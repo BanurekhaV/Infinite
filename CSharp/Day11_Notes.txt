@@ -31,4 +31,7 @@ for(int i=1;i<=10;i++)
 });
 
 
-Files and Serialization :
+Files and Serialization : Various class are supported in DotNet Framework to read and write varieties of data viz. ByteReader/Writer, BinaryReader/Writer, BufferedReader/Writer, StringReader/Writer, StreamReader/Writer, FileReader/Writer
+
+- FileInfo - to read all files
+- DirectoryInfo - to read files from a directory
