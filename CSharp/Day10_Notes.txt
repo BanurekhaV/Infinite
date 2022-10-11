@@ -42,3 +42,5 @@ one subscriber can handle events from multiple publishers
 
 series of activities : user-->events-->delegates-->functions
 
+
+
