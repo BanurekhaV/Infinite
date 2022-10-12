@@ -20,6 +20,40 @@ Task Scheduler is responsible for starting and managing the task
 
 Language Enhancements: 
 
+C#2.0   - done
+  - Static Classes
+  - Property Acessors
+  - Nullable Types
+  - Partial Types
+
+C#3.0
+  - Implicitly Typed Variables   - done
+  - Anonymous Types   - done
+  - Object/Collection Initializers  - done
+  - Extension methods
+  - Lambda Expressions
+  - Query Expressions
+
+C#4.0, 4.5, 5.0
+  - Named and Optional Parameters- done
+  - CoVariance   - done
+  - Task Parallel Library  - done
+  - Async Await    - done
+  - Literal Movement  - done
+
+C#6.0
+  - Using Static - done
+  - Auto property Initializers
+  - Exception Filters
+  - Null conditional Operator (null coalescing) - done
+  - Expression Bodied Methods
+  - String Interpolation    - done
+
+C#7.0
+  - Tuples
+  - Local Functions  - done
+  - Throw Expressions
+
 1. Anonymous Types
 2. #3 usages of the using keyword
      1. To include a namespace
@@ -27,4 +61,6 @@ Language Enhancements:
      3. To include static classes
 3. Local Functions:If we want to execute a piece of code multiple times within a method, then such codes can be written as an inner function
 4. Literal Movements: Literals are type of data (alphabets, numbers, alphanumeric, symbols) To enhance readability of data (esp numbers/binary), we can use a _ (digit separator)
+5. Named, Optional and Default Parameters
+
  
