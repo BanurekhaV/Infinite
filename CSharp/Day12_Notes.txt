@@ -1,0 +1,11 @@
+Serialization : 
+
+MetaData - Data about Data
+
+Attributes or Annotations or Decorators (classes that provide additional inputs for a particular process/event/task etc.)
+
+JSON : is simple texual representation of data, that acts as common messaging/exchange of data across applications over the net.
+
+It is a key value pair set of data 
+
+{"key" : "value" / value   }
