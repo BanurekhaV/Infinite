@@ -1,0 +1,13 @@
+- Autoproperty Initializers : with C#6.0, we have a possibility of initializing the properties along side the declaration, with the options of enabling or disabling access of the properties using private {set;get;}, protected {set;get;}
+
+- Dictionary : Is comparable to Hashtable, that both use key value pair, but differ 
+  - Dictionary is generic and hence and have specific datatype for key and value.
+  - Because of the above method, they are faster when compare d to HashTable. (No conversion required)
+  - Dictionary throws error if the key is not found, whereas HahTable will return a null
+
+- Exception Filters : Allows to specify a condition clause for each catch block
+   - To use ecxeption filters, we need to declare the filter in the same line as that of the catch block declaration
+   - If the condition evaluates to true, then catch block will be executed, else the exception continues
+
+Expression bodied members : A feature introduced in c#6.0
+  It simplifies the syntactical expression 
