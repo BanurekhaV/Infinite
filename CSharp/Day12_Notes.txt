@@ -43,7 +43,7 @@ C#4.0, 4.5, 5.0
 
 C#6.0
   - Using Static - done
-  - Auto property Initializers
+  - Auto property Initializers  - done
   - Exception Filters
   - Null conditional Operator (null coalescing) - done
   - Expression Bodied Methods
