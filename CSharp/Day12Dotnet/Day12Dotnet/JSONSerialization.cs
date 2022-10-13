@@ -10,10 +10,10 @@ namespace Day12Dotnet
     {
        [NonSerialized]
         public string CustId;
-       // [DataMember]
-        public string Name ;
-       // [DataMember]
-        public string City ;
+        // [DataMember]
+        public string Name;
+        // [DataMember]
+        public string City;
 
         public string ToJson()
         {
