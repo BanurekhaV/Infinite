@@ -11,7 +11,7 @@ namespace Lang_Enhancements_3
         public int ID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-
+     
         //function to create a list of student details
         public static List<Student> GetStudents()
         {
