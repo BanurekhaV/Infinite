@@ -35,3 +35,5 @@ public void IsEvenNo(int n)=>Cw("is the given Number {n} even ? :" + IsEven(n));
 shape.IsEvenNo(4);
 
 InLine function : Few lines of executable code that needs to be executed only once can be written without a function name
+
+

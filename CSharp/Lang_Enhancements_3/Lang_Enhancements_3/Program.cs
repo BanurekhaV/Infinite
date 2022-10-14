@@ -53,6 +53,7 @@ namespace Lang_Enhancements_3
             Console.WriteLine("Expression Bodied Method" + shape.GetAreaofRect(5, 6));
             Console.WriteLine(shape.LeapYear(2016));
             shape.Getname("Infinite");
+          //  int area = shape.GetAreaofRectangle(10, 2);
             Print p = new Print(shape.DelFunc);
             p(10);
             //inline functions / Anonymous Functions using delegate
@@ -62,7 +63,7 @@ namespace Lang_Enhancements_3
                 Console.WriteLine("Trying to Understand Inline functions");
             });
             p1(100);
-            Console.WriteLine("____________");
+            Console.WriteLine("----------------");
             p1(200);
             Console.Read();
         }

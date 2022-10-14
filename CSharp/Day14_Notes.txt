@@ -1,0 +1,10 @@
+Tuples : Is a data structure that contains a sequence of elements of dufferent data types
+When we need more values from a method, we can use tuples.
+
+The different ways to return more than one value from a method :
+1. Using Out Variables : But this is not allowed in async methods (parallel Execution)
+2. Using Custom Datatype : But tedious and may be too much for the requirement
+3. Using Dynamic Datatype : But has performance issues
+
+
+Query Expressions n Lambda Expressions : 
