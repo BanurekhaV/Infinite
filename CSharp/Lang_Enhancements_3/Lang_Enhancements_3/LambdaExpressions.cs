@@ -82,6 +82,6 @@ namespace Lang_Enhancements_3
             Console.WriteLine(data);
             var data1 = numbers.Max();
             Console.WriteLine(data1);
-        }
+        }       
     }
 }
