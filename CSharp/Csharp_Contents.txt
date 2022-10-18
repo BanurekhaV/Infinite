@@ -30,5 +30,5 @@
         Language Enhancements in C# 3.0
         Language Enhancement in C# 4.0, 5.0 and .NET 4.5
         C# 6.0 Features
-
+        C# 7.0 Features
 

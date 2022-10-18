@@ -1,7 +1,8 @@
         Design Patterns and Principles
         Dependency Injection using Unity Framework
         Unit Testing with TDD approach
-        RDBMS Fundamentals Concepts
+        
+        RDBMS Fundamentals Concepts
         Normalization Concepts
         SQL Server Overview 
         Creating Tables and Data Types

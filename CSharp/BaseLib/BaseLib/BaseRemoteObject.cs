@@ -10,6 +10,6 @@ namespace BaseLib
     {
         public abstract void setValue(int pvalue);
         public abstract int getValue();
-        public abstract string getText();
+        public abstract string getText();        
     }
 }

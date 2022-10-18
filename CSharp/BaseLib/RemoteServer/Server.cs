@@ -11,6 +11,7 @@ using System.Runtime.Remoting.Channels.Http;
 
 namespace RemoteServer
 {
+    //service class with implementation
     class RemoteServerObject : BaseRemoteObject
     {
         int mvalue;
