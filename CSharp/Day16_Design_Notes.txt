@@ -1,3 +1,9 @@
+Remote Procedure Calls RPC
+Remoting
+Web Services
+Windows Communication Framework
+Web API s
+
 Book called Elements of Reusable Object-Oriented Software, authored by 4 people anf famously known as Gang of Four
 
 SW Engg. Principles:
