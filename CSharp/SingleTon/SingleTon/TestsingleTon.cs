@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SingleTon
 {
+    //client2
     class TestsingleTon
     {
         static void Main()

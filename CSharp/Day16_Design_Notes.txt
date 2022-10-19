@@ -39,12 +39,16 @@ DIP : Design Principle. Suggests a solution to the dependency problems, but does
 
 Inversion of Control (Ioc) : is the actual mechanism that allows high level components to depend on abstraction rather than the low level (concrete implementation classes)
 
+" Inversion of Control" is a principal, and Dependency Injection is Implementation
+
 Dependency Injection (DI) : is the design pattern to inject concrete implementation of low level component into a high level component
 
 Ioc Container : Is a programming framework that provides automatic DI of the components. Is responsible for
 1. Registration of a specific dependency type.
 2. Resolution : creating a dependency object and injecting into the actual requesting class
 3. Disposition : Managing the lifetime of the dependencies
+
+We can use the Unity Framework IIoc container)provided by Microsoft to achieve DI
 
 DI can be used as below:
 1. Constructor Injection : Instance of dependency can be passed as an argument to the constructor of the dependant class
