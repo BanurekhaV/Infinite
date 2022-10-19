@@ -27,7 +27,7 @@ O : Open Close Principle (OSP)
    A s/w Module or a class is open for extension, but closed for modification
 
 L : Liskov Subsitution principle (LSP)
-   Is an extension to OSP, where derived classes extend the base class without changing the behaviour (usage of Interface)
+   Is an extension to OSP, where derived classes extend the base class without changing the behaviour (usage of Interface methods)
 
 I : Interface Seggregation principle (ISP)
    Clients should not be forced to implement interfaces that they do not use. Instead of one Fat Interface,small interfaces are prefered, based on set of methods, each one serving one purpose
