@@ -9,6 +9,7 @@ namespace MStestMainDll
     public class User
     {
         public Boolean IsAdmin { get; set; }
+              
     }
 
     public class Reservation
