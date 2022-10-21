@@ -75,3 +75,74 @@ update Employee set Phone='0007'
 where Empid=6
 
 update Employee set Salary=12100 where Empname='Brahmaji'
+
+
+--to delete a table permanently, lets create a dummy table and drop it
+create table dummy(dummyid int, dummyname varchar(10))
+insert into dummy values(1,'Dummy1'),(2,'Dummy2')
+select * from dummy
+drop table dummy
+select * from dummy    --- invalid object message is thrown
+
+truncate table dummy   
+delete from dummy
+
+
+--Disabling check constraint
+alter table Employee nocheck constraint chksal
+--enabling check constraint
+alter table Employee check constraint chksal
+
+--select options
+
+--restriction
+select  * from Employee where gender='Female'
+
+--projection
+select Empname, Salary from Employee
+
+--projection and restriction
+select Empname,salary from Employee where gender='Female'
+
+--select top few records
+select top 3 * from Employee
+select top 3 Salary from Employee
+
+--select top percentage of records
+select top 20 percent * from Employee
+
+--alias names for columns 
+select empid as 'Employee Number',empname 'Employee Name' from Employee
+
+--Arithmetic operators in select
+select Salary as 'Old Salary', Salary+1000 as 'New Salary' from Employee
+select Salary, (Salary*12) 'Annual Salary' from Employee
+
+--Relational Operators in select
+select * from employee where salary >12000
+select * from employee where salary >=12000
+select * from employee where salary=12000
+select * from employee where deptid!=1
+
+--logical operators in select
+select * from employee where salary>=11000 and salary<=12100
+select * from employee where salary>12000 or deptid=4
+
+--between operators in select
+select * from employee where salary between 11000 and 12100
+
+--in operator in select
+select * from employee where deptid = 1 or deptid=2
+
+select * from employee where deptid in(1,2)
+
+--not operators in select
+select * from employee where deptid not in(1,2)
+select * from employee where not salary between 11000 and 12100
+select * from employee where salary not between 11000 and 12100
+
+--nulls in select
+select * from employee where deptid is null
+select * from employee where deptid is not null
+
+
