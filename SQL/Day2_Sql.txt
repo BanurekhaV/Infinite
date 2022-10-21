@@ -146,3 +146,70 @@ select * from employee where deptid is null
 select * from employee where deptid is not null
 
 
+--wildcards using like operator
+/*  
+% - zero,one or more characters substitution
+_ - exactly one character
+[] - range characters
+^  - negation */
+select Empname from Employee where empname like 's%' -- names that start with s followed by 0,1 or more characters
+select Empname from Employee where empname like 'An%' -- names that start with an followed by any characters or no characters
+
+select Empname from Employee where empname like 'A[in]%'-- names that start with A followed by either i or n followed by any characters or no characters
+select Empname from Employee where empname like '_a%' -- names that can have any one character followed by a , then by any or none charcaters
+select Empname from Employee where empname like '%i%' -- names that have any or none characters, but definitely should have i in them, then followed by any or none chrs
+
+select empname from employee where empname like '%i' --names that have i in them in any place
+select empname from employee where empname like '__r%' -- names that have r as their 3rd character 
+
+--names that start with either a,s,v nut should end with a
+select empname from employee where empname like '[asv]%a'
+
+--names that end with a but does not have either a or s as their start character
+select empname from employee where empname like '[^as]%a'
+
+select empname from employee where empname like '_[^as]%a'
+
+--Aggregate functions in select
+select max(salary) from employee
+select min(salary) from employee
+select count(empid) from employee
+select count(deptid) from employee  -- count ignores null values
+select count(empname) from employee 
+
+select count(*)deptid from employee  --count * includes null values
+select avg(salary) from employee
+
+select deptid from employee
+
+select distinct(deptid) from employee  -- gets only unique values and avoids duplicates
+
+--Note :
+--Functions cannot be used in the RHS of the where clause
+
+select * from employee where salary>avg(salary)
+
+--to create  a table with an identity column
+sp_help employee  -- no identity column defined
+
+create table dummy
+(dummyid int identity(1,2),
+dummyname varchar(20),
+dummyage int)
+
+insert into dummy values('Dummy4',12),('Dummy2',14),('Dummy3',15)
+select * from dummy
+
+delete from dummy where dummyid=5
+
+sp_help dummy
+
+--to create composite primary key
+create table sample
+(eid int ,
+pid int ,
+duration int
+primary key(eid,pid))
+
+insert into sample values(1,100,600),(1,200,450),(2,100,500),
+select * from sample
