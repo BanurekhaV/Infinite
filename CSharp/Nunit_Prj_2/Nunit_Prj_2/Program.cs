@@ -38,7 +38,7 @@ namespace Nunit_Prj_2
         {
             new EmployeeData{Id=100, Name="Ajith",Salary=35000,Gender="Male"},
             new EmployeeData{Id=101, Name="Sanjay",Salary=38000,Gender="Male"},
-            new EmployeeData{Id=102, Salary=39000,Gender="Female"},
+            new EmployeeData{Id=102, Name="Sukanya",Salary=39000,Gender="Female"},
             new EmployeeData{Id=103, Name="Aruna",Salary=40000,Gender="Female"},
         };
             return emplist;

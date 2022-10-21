@@ -1,0 +1,77 @@
+use InfiniteDB
+select * from Department
+select * from Employee
+
+--add/insert rows/tuples/records
+insert into Department(DeptId,DeptName)
+values(5,'IT')
+
+--insert many records with one insert statement/command
+insert into Department values(2,'Operations',200000),(4,'Sales',400000),(3,'Admin',50000)
+
+sp_help Employee
+
+create table Employee
+(Empid int primary key,
+Empname varchar(30),
+Salary float,
+Gender char(7),
+DeptId int foreign key references Department(DeptId))
+
+insert into Employee values(1,'Aishwarya',12000,'Female',null,'12345'),(2,'Tejaswi',12200,'Female',1,'23456'),
+(3,'Sampreeth',12300,'Male',1,null),(4,'Harish',12000,'Male',2,'66666'),
+(5,'Varsha',12100,'Female',3,'123456')
+
+insert into Employee values(6,'Brahmaji',12000,'Male',4,null)
+
+select * from Employee
+--to add a column after the table is created and values are inserted
+alter table Employee
+add Phone varchar(15) unique 
+
+--to drop a column from the table
+alter table Employee
+drop column Phone
+
+--drop a constarint from a table
+
+alter table Employee
+drop constraint  UQ__Employee__5C7E359ED0396A9B   --(system defined constraint name)    
+ -- drop constraint <constraintname>
+alter table Employee
+drop constraint unqphone     --(user defined constraint name)
+
+--add a constraint
+alter table Employee
+add constraint unqphone unique(Phone)
+
+--check constraints
+alter table Employee
+add constraint chksal check(Salary >=12000)
+
+--default constraints ( default values for a column when we dont supply one)
+alter table Department
+add City varchar(25) default 'Bangalore'  -- or add acolumn first and then add constraint as below
+
+alter table Department 
+add constraint defcity Default 'Bangalore' for City
+
+alter table Department
+drop constraint defcity
+
+alter table Department
+drop column City
+
+--inserting a record to check default values
+insert into Department(Deptid,DeptName)
+values(6,'Accounts')
+
+select * from Department
+--to delete records from a table
+delete from Employee
+
+--to update values of a row/s in table
+update Employee set Phone='0007'
+where Empid=6
+
+update Employee set Salary=12100 where Empname='Brahmaji'
