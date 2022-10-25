@@ -1,0 +1,63 @@
+The order of any select query execution is :
+
+from
+where
+group by
+having
+order by
+select
+
+
+select * from employee
+--sorting of data on a specific column/s
+--order by is the clause for sorting
+--only the output is sirted and not the physical data
+--multiple column sorting is possible
+--by default sorting is ascending(can make it desc)
+--sorting on alias column is possible
+--sorting on a column/s which are not a part of the select statement
+select * from employee order by Empname
+select Empid, empname 'EmployeeName', salary from  employee order by employeename
+select Empid, empname, deptid from employee order by salary desc
+select empname,salary from employee order by salary desc
+
+select empname, salary from employee order by empname,salary desc
+select empname,gender,salary from employee order by gender,salary desc
+select empname, deptid, salary from employee order by deptid desc,salary 
+
+--group by clause
+--have to group on all columns in the select clause excluding aggregates
+--can group on multiple columns
+--cannoty group on a column that is not a part of the select clause
+--cannot group by on an alias column
+
+--find the total salary per department
+select deptid,sum(salary) as TotalSalary,count(empname) from employee
+group by deptid,gender        --
+
+select deptid as Departmentid, gender, sum(salary) as TotalSalary from employee
+group by gender,DeptId
+
+--no of male and female employees working in the organization
+select gender,count(*) from employee group by gender
+select distinct(gender),count(gender) from employee group by gender
+
+-- no of male and female staff in each dept
+select gender,deptid as DeptId,count(gender) as 'Total Employees' from employee group by deptid,gender
+
+--display all the departments where total salary is greater than 25000
+select deptid as Departmentid, sum(salary) as TotalSalary  from employee
+group by DeptId
+having sum(salary)>25000
+
+--display dept wise max salary where max salary is > 12300
+select deptid,max(salary) as 'Max Salary' from employee group by deptid 
+having max(salary)>12300
+order by deptid desc
+
+--to filter few records before forming a group, use where clause
+select deptid,max(salary) as 'Max Salary' from employee 
+where deptid is not null
+group by deptid 
+having max(salary)between 12350 and 12500
+order by deptid desc

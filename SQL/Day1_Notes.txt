@@ -74,7 +74,7 @@ Consists of 5 Components
 Data Types : 
 char(n)
 varchar(n), nvarchar(n/max)
-number(p,d)  
+numeric  
 float
 date
 real
