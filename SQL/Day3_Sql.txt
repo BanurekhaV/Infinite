@@ -87,16 +87,141 @@ order by deptid desc
    order by deptname
 
    --cross join
+
    select * from employee,department
    --or
    select * from employee cross join department
 
    --self join
-   --select empid,empname,salary,deptid from employee t1, employee t2
-   --where t1.Empid=t2.mgrid
+
+   select * from tbl_employee
+   select t2.empno as 'Subordinate Id',t2.ename as 'Subordinate Name',
+   t1.empno as 'Supervisor Id',t1.ename as 'Supervisor Name' from tbl_employee t1, tbl_employee t2
+   where t1.Empno=t2.manager_id
 
    --left outer join
    select * from employee e left join Department d on e.DeptId=d.DeptId
 
    --right outer join
    select * from employee e right join Department d on e.DeptId=d.DeptId
+
+
+ --indexes
+  /* 2 types
+  1. Clustered Index: 
+   -One per table. 
+   -The table gets physically sorted on every DML operations
+   -Gets created automatically on the Primary Key column
+   -If a table does not have a PK, then we can create a clustered unique index
+
+  2. Non Clustered Index : Many per table. 
+    - can be on as many columns as we want
+	- creates a seperate index table and sorts the data there,and does affect the physical original data in the table.
+	- Can have unique nonclustered index or just nonclusterd index
+   */
+  drop table sample
+create table sample(sampleid int,
+sname varchar(20),
+slocation varchar(20))
+--creating an index
+create index idxsampleid on sample(sampleid)
+--dropping an index
+drop index sample.idxsampleid
+drop index sample.idxsid
+--creating an clustered index
+create clustered index idxsid on sample(sampleid)
+select * from sample
+
+--creating an unique clustered index
+create unique clustered index idx_sid on sample(sampleid)
+
+insert into sample values(null,'sample1','location1'),(35,'sample2','location2'),
+(12,'sample3','location3')
+delete from sample where sname='sample2'
+
+sp_help sample
+
+--creating non clustered indexes
+--1. Unique Nonclustered (No duplicate data for the column
+create unique nonclustered index idxename on employee(empname)
+drop index employee.idxename
+
+create nonclustered index idxename on employee(empname)
+
+create table projects(eid int , pid int, prjname varchar(30),duration char(10)
+primary key(eid,pid))
+
+sp_help projects
+
+insert into projects values(1,100,'Salesmanagement','125hrs'),
+(2,100,'Salesmanagement','125hrs'),(1,200,'Studentsmanagement','200hrs')
+
+select * from projects
+
+--Transact Sql T-Sql
+/*begin
+ declare variables
+ assign values
+ use if/else , loops, calls 
+ print
+end*/
+--variables are of 2 type 1. Local (@) and 2. Global  (@@)
+--eg 1
+begin
+ declare @v1 int =0,@v2 int=0,@sum int
+ set @v1=5
+ set @v2=10
+ set @sum=@v1+@v2
+ print @sum
+ select @sum
+end
+
+--eg 2
+
+   declare @var1 int
+   declare @var2 int
+   select @var1=10
+   select @var2=40
+begin
+  if(@var1 >@var2)
+  print 'Var 1 is greater than Var2'
+  else
+  print 'Var2 is greater'
+end
+
+--eg3
+select empname,salary from employee where empid=2
+begin
+  declare @sal float
+  declare @name varchar(20)
+  select @name=empname,@sal=salary from employee where empid=2
+  print @sal
+  print @name
+  print 'Employee Name is :' + @name
+  print 'Employee Salary is :' + cast(@sal as varchar(20))
+  if(@sal<=12000)
+   begin
+	set @sal=@sal+3000
+	print 'Employee Revised Salary is : ' + cast(@sal as varchar(20))
+   end
+  else
+   begin
+     set @sal=@sal+1000
+	 print 'Salary is OK now ' + cast(@sal as varchar(20))
+   end
+end
+
+--eg 4
+
+declare @ctr int =0
+
+while @ctr <=10
+ begin
+  set @ctr=@ctr+1
+     
+   if @ctr=5 continue
+    print @ctr
+    
+  if @ctr=8 break
+ end
+ 
