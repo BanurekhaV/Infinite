@@ -61,3 +61,42 @@ where deptid is not null
 group by deptid 
 having max(salary)between 12350 and 12500
 order by deptid desc
+
+
+--Joins
+--to retrieve multiple coumns from various tables
+/* types of joins
+   1. Equi Join /Natural Join /Inner Join
+   2. Cross Join (cartesan product)
+   3. Self Join (mirror of the same table gets created. So we will have to give an alias name for the same table)
+   4. Outer Join : matching records of 2 tables + the non matching records
+       Left Outer Join : matching records from 2 tables + the non matching data from the left hand side table
+	   Right Outer Join : matching records from 2 tables + the non matching data from the right hand side table
+	   Full Outer Join : matching records from 2 tables + the non matching data from the left as well as right hand side table
+    */  
+     --equi/natural/inner join
+     select * from department
+   select * from Employee
+ 
+   select Empid,Empname,Salary,Deptname from employee,department
+   where employee.DeptId=Department.DeptId
+   order by deptname
+   --or
+   select Empid,Empname,Salary,Deptname from employee inner join department
+   on employee.DeptId=Department.DeptId
+   order by deptname
+
+   --cross join
+   select * from employee,department
+   --or
+   select * from employee cross join department
+
+   --self join
+   --select empid,empname,salary,deptid from employee t1, employee t2
+   --where t1.Empid=t2.mgrid
+
+   --left outer join
+   select * from employee e left join Department d on e.DeptId=d.DeptId
+
+   --right outer join
+   select * from employee e right join Department d on e.DeptId=d.DeptId
