@@ -19,6 +19,9 @@ Transaction management ensures
 Save Points : are logical markers/blocks of a set of statements in a transaction
 It is not ANSI standard sql
 
+rank() - that assigns a rank number to each row
+rank with partition - the rows within a partition which have the same values have to receive the same rank 
+
 
 Locks : 1. Shared Lock 2. Exclusive Lock
 
@@ -26,3 +29,23 @@ A -  Atomicity
 C -  Consistency
 I -  Isolation
 D -  Durability
+
+
+
+Stored Procedure : Reusable set of sql statements with a name. which is stored as an object inside the database schema.
+
+The statements query plan also gets saved along with the procedure, hence the execution time is less
+
+They can take input parameters, give output parameters and also one return type 
+
+The return type of all procedures is int
+
+Syntax : create procedure <procedure name> as
+         begin
+         any valid sql statement/s
+         end
+
+
+
+
+
