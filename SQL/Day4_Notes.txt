@@ -54,6 +54,14 @@ Functions are broadly of 2 types viz.
        b. Multi Statement table valued functions
 
 
+Difference between  Functions and Procedures
+
+Functions must return a value, where as procedure need not return 
+Functions have only input parameters, where as procedures have input, output parameters
+Functions can be used only to perform select operations, where as procedures can perform insert,update,delete, select operations
+Functions do not support transaction management or exception handling, where as procedures support both
+Functions can call other functions, but not procedures, where as procedures can call other procedures and functions
+Functions are executed only in select statement, where as procedures are executed using exec/execute command
 
 
 

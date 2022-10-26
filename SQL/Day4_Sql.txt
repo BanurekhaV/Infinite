@@ -259,3 +259,13 @@ select * from GetEmployeeByname(6)
 
 
 //select Empid,Empname,Salary,Phone from Employee where deptid=6
+
+
+--DML Operations thru Procedures
+create procedure insertproc (@dname varchar(20),@dage int)
+as
+begin
+ insert into dummy values(@dname,@dage)
+end
+
+exec insertproc 'thru proc',100
