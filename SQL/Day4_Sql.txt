@@ -174,3 +174,88 @@ return select deptname from department where DeptId=@did
  declare @name varchar(20)
  exec @name=getno_ofemployees_new 3
  print @name
+
+
+--functions
+ --eg scalar function
+ create function Add2nos(@a int, @b int)
+ returns int
+ as
+ begin
+  return @a+@b
+ end
+
+ --to execute the above function
+ --use 2 part qualification
+ select dbo.Add2nos(5,10) Total--or
+ print dbo.Add2nos(20,20) 
+
+ print 'The Sum of 2 nos :' + cast(dbo.Add2nos(20,20)as varchar(max))
+
+ --eg 2
+ create or alter function display()
+ returns varchar(max)
+ as
+ begin
+ return 'Hello and Welcome to the concpets of Sql Functions.'
+ end
+
+ select dbo.display()
+
+ --eg 3
+ --find the area of a rectangle
+ create or alter function Rect_Area(@len int,@bread int)
+ returns int
+ as
+ begin
+ declare @area int
+ set @area=@len * @bread
+ return @area
+ end
+
+ select dbo.Rect_Area(5,6) as 'Rectangles Area'
+
+ --eg 4
+ --given a dept id, get the name of the dept
+ create or alter function getDept(@id int)
+ returns varchar(max)
+ as
+ begin
+ return (select deptname from Department where deptid=@id)
+ end
+
+ select dbo.getDept(3)
+
+ --inline table valued functions
+ create or alter function inlinetablefunc1(@did int)
+ returns table
+ as
+  return (select Empid,Empname,Salary,deptid from employee  
+         where deptid=@did)
+
+select * from inlinetablefunc1(2)
+
+--multi statement table valued function
+create or alter function GetEmployeeByname(@did int)
+returns   -- returns data captured in a temporary table structure
+@EmpByName table(
+EmployeeNo int,
+Ename varchar(30),
+Esalary float,
+EPhone varchar(15)
+)
+as
+begin
+     insert into @EmpByName select Empid,Empname,Salary,Phone from Employee where deptid=@did
+   --check if data from employee table that matched the deptid, is inserted successfully into the temp table
+     if @@ROWCOUNT=0
+     begin
+       insert into @EmpByName values(0,'No Employees in dept',0,null)
+     end
+return
+end
+
+select * from GetEmployeeByname(6)
+
+
+//select Empid,Empname,Salary,Phone from Employee where deptid=6

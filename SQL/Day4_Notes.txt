@@ -45,6 +45,15 @@ Syntax : create procedure <procedure name> as
          any valid sql statement/s
          end
 
+Functions : Are also like procedures. But they do not have any output parameters. They can take one or more input parameters. They will return any one scalar data type
+
+Functions are broadly of 2 types viz.
+  1. Scalar valued function (returns one scalar datatype)
+  2. Table Valued Function (returns multiple data -rows/cols)
+       a. Inline Table valued functions.(returns a table. Is not enclosed with begin and end keyword. They are used in where and join clauses 
+       b. Multi Statement table valued functions
+
+
 
 
 
