@@ -1,0 +1,28 @@
+Transactions : Are sql statements that are executed together as one 
+
+It consists of DML statements, DQL statements
+Can have a DDL statement
+Can have a DCL statement
+
+Begins when the first DML statement is executed
+Ends when any one of the following events happen
+    A commit or a Rollback statement
+    An auto commit statement is encountered
+    The user exits
+    System crashes
+
+Transaction management ensures
+  Data consistency
+  Preview data changes before and after making changes   permanent
+  Grouping related operations
+
+Save Points : are logical markers/blocks of a set of statements in a transaction
+It is not ANSI standard sql
+
+
+Locks : 1. Shared Lock 2. Exclusive Lock
+
+A -  Atomicity
+C -  Consistency
+I -  Isolation
+D -  Durability

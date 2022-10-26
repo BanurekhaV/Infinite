@@ -1,0 +1,53 @@
+select * from employee
+select * from dummy
+select * from department
+
+-- 1st Transactions -- except delete employee, all will be rolled back
+
+begin transaction
+
+ delete from employee where empid=12   -- has to be comitted
+ select * from employee
+ save tran s1
+ update employee 
+ set deptid=1 where empid=1
+ insert into dummy values('Transactiondummy',2)
+ select * from dummy
+ save tran s2
+ update Department set city='Chennai' where deptid=3
+ select * from department
+ rollback tran s1
+ commit
+
+
+--2 nd transaction -- last update department alone will be rolled back
+
+--Transactions
+begin transaction 
+ insert into employee values(12,'Harshini',12600,'Female',4,2222222)
+ select * from employee
+ save tran s1
+ update employee 
+ set deptid=1 where empid=1
+ insert into dummy values('Transactiondummy',2)
+ select * from dummy
+ save tran s2
+ update Department set city='Chennai' where deptid=3
+ select * from department
+ rollback tran s2
+ commit
+
+--3rd transaction  -- all statements will be rolled back
+
+begin transaction 
+ insert into employee values(13,'Harshini',12600,'Female',4,2122222)
+ select * from employee
+ save tran s1
+ update employee 
+ set deptid=2 where empid=1
+ insert into dummy values('Tdummy',25)
+ select * from dummy
+ save tran s2
+ update Department set city='Chennai' where deptid=3
+ select * from department
+ rollback   
