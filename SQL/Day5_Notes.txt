@@ -31,9 +31,31 @@ Steps of cursor life cycle
  5. Deallocate
 
 Types of Cursors :
- 1. Forward only cursor : moves from 1st record to next next only. Cannot go to previous record
- 2. Static cursor : 
- 3. Dynamic cursor
+ 1. Forward only cursor : moves from 1st record to next only. Cannot go to previous record
+ 2. Static cursor :  Can move forward and backward within the cursor
+ 3. Dynamic cursor : By default are scrollable. There are very sensitive to any changes to the data source. They support DML
+
+
+Triggers : Are like procedures or functions, but differ in the way they get executed. They are fired on any specific event (DML operations)
+
+-They can be either at database level or table level
+-We can have triggers for insert,update and delete 
+- There are 3 types of triggers
+   - After trigger 
+   - Before Trigger
+   - Instead of Trigger
+
+2 Magic Tables are created when we work with triggers. They are only accesible within the trigger. They are called as inserted and deleted 
+
+Syntax for trigger : create trigger <triggername>
+on <tablename>
+for <event(insert/update/delete)>
+as
+begin
+
+--sql statements
+end
+
 
 
 

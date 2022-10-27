@@ -170,4 +170,102 @@ fetch relative 5 from mycur2 into @ename,@esal
  close mycur2
  deallocate mycur2
 
+ --triggers
+ --eg 1
+ create or alter trigger trg_ins_Emp
+ on Employee   
+ for Insert
+ as
+ begin 
+  select * from inserted  -- to show the contents of the inserted table
+  select * from employee
+ end
+
+
+ --the above trigger does not fire on update or delete events on employee
+ select * from employee
+ delete from employee where empname='Banurekha'
+
+ --now when we insert records into employee table the above trigger will fire
+ 
+ insert into employee values(200,'Banurekha',15000,'Female',null,5555555)
+
+ --eg .2  update trigger
+ create trigger trg_upd_Emp
+ on Employee
+ for update
+ as
+ begin
+  select * from deleted
+  select * from inserted
+ end
+
+ update employee set phone='666666666', deptid=5 where empid=200
+
+--eg 3
+ 
+--when a record is inserted into employee table, a trigger should fire and insert a record into Audit (log file)
+create table AuditTable
+(Msg varchar(1000))
+
+select * from tbl_Employee  --empno =7777, mgrid=7839
+
+create trigger trgAudit
+on tbl_employee
+for insert
+as
+begin
+  declare @id int
+  select * from inserted
+  select @id=Empno from inserted
+  insert into AuditTable 
+  values('New Employee with Empno '+ cast(@id as nvarchar(5)) + ' is added at ' +
+   cast(getdate() as nvarchar(max)))
+end
+
+insert into tbl_Employee values(7777,'Abracadabra','Jobless',7839,'2022/10/27',11000,500,40)
+
+select * from tbl_employee
+select * from AuditTable
+
+--eg 3 delete trigger
+
+create trigger trgAudit_del
+on tbl_employee
+for delete
+as
+begin
+  declare @id int
+  select * from deleted
+  select @id=Empno from deleted
+  insert into AuditTable 
+  values('Existing Employee with Empno '+ cast(@id as nvarchar(5)) + ' is deleted at ' +
+   cast(getdate() as nvarchar(max)))
+end
+
+delete from tbl_employee where empno=7777
+
+--eg 4 --update trigger
+create or alter trigger trgAudit_Upd
+on tbl_employee
+for update
+as
+begin
+declare @id int, @oldname varchar(max),@newname varchar(max)
+declare @oldsalary money, @newsalary money
+declare @auditmsg varchar(1000)
+select * from deleted
+select * from inserted
+select @id=empno from inserted
+select @oldname =Ename from deleted
+select @oldsalary=Salary from deleted
+set @auditmsg=Concat(@oldname,@oldsalary)
+
+insert into Audittable values(@auditmsg)
+end
+
+update tbl_employee set Ename='SMITHA RANI',salary=1800 where empno=7369
+select * from tbl_employee
+select * from Audittable
+
  
