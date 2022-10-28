@@ -39,11 +39,43 @@ namespace Day1_ADO_Basic
             catch(SqlException se)
             {
                 Console.WriteLine("Error in the Server...");
-            }
+            }            
+        }
+
+        public static void InsertEmployee()
+        {
+            con = getConnection();
+            //giving static hard coded values as below will result in errors on successive execution
+            // cmd = new SqlCommand("insert into employee values(300,'ADO',16000,'Others',5,'999999')",con);
+           
+            Console.WriteLine("Please enter Empid,Name,salary,Gender,Deptid,Phone");
+            int eid = Convert.ToInt32(Console.ReadLine());
+            string ename = Console.ReadLine();
+            float esal = float.Parse(Console.ReadLine());
+            string egender = Console.ReadLine();
+            int edid = Convert.ToInt32(Console.ReadLine());
+            string ephone = Console.ReadLine();
+            cmd = new SqlCommand("insert into employee values(@empid,@empname,@empsal,@empgen,@empdid,@empph)", con);
+            //command object has property known as parameters - a collection object
+            //to the parameters collection, we have to add the parameters for insert
+            cmd.Parameters.AddWithValue("@empid", eid);
+            cmd.Parameters.AddWithValue("@empname", ename);
+            cmd.Parameters.AddWithValue("@empsal", esal);
+            cmd.Parameters.AddWithValue("@empgen", egender);
+            cmd.Parameters.AddWithValue("@empdid", edid);
+            cmd.Parameters.AddWithValue("@empph", ephone);          
             
+            int records = cmd.ExecuteNonQuery();
+            if(records>0)
+            {
+                Console.WriteLine("Inserted successfully..");
+            }
+            else
+                Console.WriteLine("Something went wrong..");
         }
         static void Main(string[] args)
         {
+            InsertEmployee();
             SelectEmployees();
             Console.Read();
         }
