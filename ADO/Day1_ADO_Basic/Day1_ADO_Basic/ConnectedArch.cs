@@ -39,7 +39,10 @@ namespace Day1_ADO_Basic
             catch(SqlException se)
             {
                 Console.WriteLine("Error in the Server...");
-            }            
+            }
+            finally{
+                con.Close();
+            }
         }
 
         public static void InsertEmployee()
@@ -73,10 +76,60 @@ namespace Day1_ADO_Basic
             else
                 Console.WriteLine("Something went wrong..");
         }
+        //execute scalar eg
+        public static void ScalarEg()
+        {
+            con = getConnection();
+            // cmd = new SqlCommand("select deptid from Employee where empid=4");
+            cmd = new SqlCommand("Select count(empid) from employee");
+            cmd.Connection = con;
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            Console.WriteLine("There are {0}, no.of employees",count);
+        }
+
+        public static void DeleteEmployee()
+        {
+            con = getConnection();
+            Console.WriteLine("Enter the employee code to delete:");
+            int ecode = Convert.ToInt32(Console.ReadLine());
+            SqlCommand cmd1 = new SqlCommand("Select * from Employee where Empid=@eid", con);
+            cmd1.Parameters.AddWithValue("@eid", ecode);
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+                while (dr1.Read())
+                {
+                for (int i = 0; i < dr1.FieldCount; i++)
+                {
+                    Console.WriteLine(dr1[i]);
+                }
+                }
+            con.Close();
+            Console.WriteLine("Are you Sure to delete this Employee? Y/N :");
+            string status = Console.ReadLine();
+            if(status=="y" || status=="Y")
+            {
+                cmd = new SqlCommand("delete from Employee where empid=@eid", con);
+                cmd.Parameters.AddWithValue("@eid", ecode);
+                con.Open();
+                int res=cmd.ExecuteNonQuery();
+                if(res>0)
+                {
+                    Console.WriteLine("Record Deleted Successfully...");
+                }
+                else
+                    Console.WriteLine("Contact DBA..");
+            }
+            else
+            {
+                Console.WriteLine("You Opted not to delete the Employee");
+            }
+        }       
+                          
         static void Main(string[] args)
         {
-            InsertEmployee();
-            SelectEmployees();
+            //ScalarEg();
+            DeleteEmployee();
+            //InsertEmployee();
+           // SelectEmployees();
             Console.Read();
         }
     }
