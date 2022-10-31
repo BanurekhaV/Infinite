@@ -123,13 +123,77 @@ namespace Day1_ADO_Basic
                 Console.WriteLine("You Opted not to delete the Employee");
             }
         }       
-                          
+              
+        public static void StoredProcCall()
+        {
+            con = getConnection();
+            cmd = new SqlCommand("fewEmployee", con); //name of the procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+           dr= cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                Console.WriteLine("Employee Id: " + dr[0]);
+                Console.WriteLine("Name :" + dr[1]);
+                Console.WriteLine("Salary :" +dr[2]);
+                Console.WriteLine("Gender :" + dr[3]);
+                Console.WriteLine("Dept id :"+dr[4]);
+                Console.WriteLine("Phone :"+dr[5]);
+            }
+        }
+        public static void StoredProc_withParameter()
+        {
+            con = getConnection();
+            Console.WriteLine("Enter Employee Id :");
+            int eid = Convert.ToInt32(Console.ReadLine());
+            cmd = new SqlCommand("getemployeebyid @empid", con);
+           // cmd.CommandType = CommandType.StoredProcedure;
+             cmd.Parameters.AddWithValue("@empid", eid);
+
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Console.WriteLine("Employee Id: " + dr[0]);
+                Console.WriteLine("Name :" + dr[1]);
+                Console.WriteLine("Salary :" + dr[2]);
+                Console.WriteLine("Gender :" + dr[3]);
+                Console.WriteLine("Dept id :" + dr[4]);
+                Console.WriteLine("Phone :" + dr[5]);
+            }          
+
+        }
+
+        public static void Stored_Proc_With_Output()
+        {
+            con = getConnection();
+            Console.WriteLine("enter name :");
+            string ename = Console.ReadLine();
+            cmd = new SqlCommand();
+            cmd.CommandText = "getemployeesalary @ename, @esal";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+            //cmd.Parameters.AddWithValue("@ename", ename);
+            cmd.Parameters.Add(new SqlParameter("@ename", SqlDbType.NVarChar, 0, ename));
+            cmd.Parameters.Add("@esal", System.Data.SqlDbType.Float).Direction =
+                System.Data.ParameterDirection.Output;
+
+            dr = cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                float sal;
+                sal = (float)dr[0];
+                Console.WriteLine(sal);
+            }
+        }
         static void Main(string[] args)
         {
             //ScalarEg();
-            DeleteEmployee();
+            //DeleteEmployee();
             //InsertEmployee();
-           // SelectEmployees();
+            // SelectEmployees();
+            // StoredProcCall();
+            // StoredProc_withParameter();
+            Stored_Proc_With_Output();
             Console.Read();
         }
     }
