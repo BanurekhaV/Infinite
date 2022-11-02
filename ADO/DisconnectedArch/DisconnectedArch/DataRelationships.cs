@@ -26,7 +26,10 @@ namespace DisconnectedArch
             dcEmployees[3] = new DataColumn("EmplStatusId", System.Type.GetType("System.Int32"));
            
             //Add the above columns to the DataTable
-            dtEmployees.Columns.Add(dcEmployees[4]);
+            dtEmployees.Columns.Add(dcEmployees[0]);
+            dtEmployees.Columns.Add(dcEmployees[1]);
+            dtEmployees.Columns.Add(dcEmployees[2]);
+            dtEmployees.Columns.Add(dcEmployees[3]);
 
             //Rows for the DataTable
             DataRow drEmplRecord = dtEmployees.NewRow();
@@ -64,8 +67,7 @@ namespace DisconnectedArch
 
             //add the above Row to the Data Table
             dtEmployees.Rows.Add(drEmplRecord);
-
-            dtEmployees.Rows.Add(drEmplRecord);
+                      
 
             drEmplRecord = dtEmployees.NewRow();
             drEmplRecord["EmpId"] = "5";
@@ -115,7 +117,7 @@ namespace DisconnectedArch
             dtEmplStatus.Rows.Add(drStatus);
 
             drStatus = dtEmplStatus.NewRow();
-            drStatus["EmplStatusID"] = "1";
+            drStatus["EmplStatusID"] = "4";
             drStatus["EmplStatus"] = "Intern";
 
             dtEmplStatus.Rows.Add(drStatus);
@@ -139,8 +141,24 @@ namespace DisconnectedArch
             //add the reltionship to the dataset
             dsEmployement.Relations.Add(EmplRel);
             Console.WriteLine("==========+=============");
+            Console.WriteLine("Staus ID     |  Employement Status");
+            Console.WriteLine("----------------------");
 
+            foreach(DataRow row in dsEmployement.Tables["EmployeeStatus"].Rows)
+                Console.WriteLine(" {0}  |  {1}",row["EmplStatusID"],row["EmplStatus"]);
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Empl ID\t |Emp Name\t  | Department\t  | Empl Status" );
+            Console.WriteLine("-----------------------------------");
+            foreach(DataRow row in dsEmployement.Tables["Employees"].Rows)
+            {
+                int irow = int.Parse(row["EmplStatusID"].ToString());
 
+                DataRow currRecord = dsEmployement.Tables["EmployeeStatus"].Rows[irow-1];
+                Console.WriteLine("{0}\t  | {1}\t   |{2}\t\t |{3}", row["EmpId"],row["EmpName"],
+                    row["Department"],currRecord["EmplStatus"]);
+            }
+            Console.WriteLine("===========================================");
+            Console.Read();
         }
     }
 }

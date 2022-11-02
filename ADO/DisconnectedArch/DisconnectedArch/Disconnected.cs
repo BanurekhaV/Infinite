@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace DisconnectedArch
 {
-    class Program
+    class Disconnected
     {
         public static SqlConnection con = null;
         public static SqlDataAdapter da;
