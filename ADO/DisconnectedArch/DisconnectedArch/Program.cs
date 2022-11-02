@@ -42,6 +42,33 @@ namespace DisconnectedArch
                     }
                     Console.WriteLine(" ");
                 }
+                //inserting a row using datasets and dataadapter
+                SqlCommandBuilder scb = new SqlCommandBuilder(da);
+                da.Fill(ds);
+                DataRow row1 = ds.Tables["InfiniteEmployee"].NewRow();
+                row1["Empid"] = 14;
+                row1["Empname"] = "Rajesh";
+                row1["Salary"] = 13500;
+                row1["Gender"] = "Male";
+                row1["DeptId"] = 5;
+                row1["Phone"] = "1166771";
+                ds.Tables["InfiniteEmployee"].Rows.Add(row1);
+                da.UpdateCommand = scb.GetUpdateCommand();
+                da.Update(ds,"InfiniteEmployee");
+                Console.WriteLine("-------------------");
+                //ensuring that t=we are pointed to the correct datatable
+                dt= ds.Tables["InfiniteEmployee"];
+
+                foreach (DataRow rows in dt.Rows)
+                {
+                    foreach (DataColumn cols in dt.Columns)
+                    {
+                        Console.Write(rows[cols]);
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine(" ");
+                }
+
 
             }
             catch(SqlException se)

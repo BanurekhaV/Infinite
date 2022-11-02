@@ -167,23 +167,43 @@ namespace Day1_ADO_Basic
         {
             con = getConnection();
             Console.WriteLine("enter name :");
-            string ename = Console.ReadLine();
+            string sname = Console.ReadLine();
+            Console.WriteLine("enter email :");
+            string smail = Console.ReadLine();
             cmd = new SqlCommand();
-            cmd.CommandText = "getemployeesalary @ename, @esal";
+            cmd.CommandText = "sp_insertstudent";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
-            //cmd.Parameters.AddWithValue("@ename", ename);
-            cmd.Parameters.Add(new SqlParameter("@ename", SqlDbType.NVarChar, 0, ename));
-            cmd.Parameters.Add("@esal", System.Data.SqlDbType.Float).Direction =
-                System.Data.ParameterDirection.Output;
-
-            dr = cmd.ExecuteReader();
-            while(dr.Read())
+            //one way of adding parameters to the procedure
+            SqlParameter param1 = new SqlParameter
             {
-                float sal;
-                sal = (float)dr[0];
-                Console.WriteLine(sal);
-            }
+                ParameterName ="@sname",
+                SqlDbType=SqlDbType.NVarChar,
+                Value=sname,
+                Direction=ParameterDirection.Input
+            };
+            cmd.Parameters.Add(param1);
+
+            //other way to add parameter to the procedure
+            // cmd.Parameters.AddWithValue("@smail", smail);
+            SqlParameter param2 = new SqlParameter
+            {
+                ParameterName = "@mail",
+                SqlDbType = SqlDbType.NVarChar,
+                Value = smail,
+                Direction = ParameterDirection.Input,
+            };
+            cmd.Parameters.Add(param2);
+            //now add output parameter to the procedure
+            SqlParameter paramout = new SqlParameter
+            {
+                ParameterName = "@Id",
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Output,
+            };
+            cmd.Parameters.Add(paramout);
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("The newely generated Student Id is :" + paramout.Value.ToString());            
         }
         static void Main(string[] args)
         {
