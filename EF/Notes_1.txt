@@ -23,4 +23,3 @@ Lazy Loading : It is opposite of Eager Loading. The process of loading the relat
 CRUD - Create, Read, Update, Delete
 
 
-CodeFirst Approach :
