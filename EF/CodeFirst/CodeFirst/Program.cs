@@ -28,13 +28,18 @@ namespace CodeFirst
             bc.SaveChanges();
             //for delete
             //bc.Books.Remove(bk);
-            //bc.SaveChanges();          
+            //bc.SaveChanges();       
             
+        }
+        static void Callproc()
+        {
+           // var blist=bc.
         }
         static void Main(string[] args)
         {
-            UpdateBooks();
-            ShowBooks();
+            //UpdateBooks();
+            //ShowBooks();
+            Callproc();
             //using(var db= new BookContext())
             //{
             //    db.Books.Add(new Book { BookName = "Introduction to EF" });

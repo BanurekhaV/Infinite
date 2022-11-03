@@ -16,5 +16,7 @@ namespace CodeFirst
         public DbSet<Book> Books { get; set; }
         public DbSet<Publishers> Publisher { get; set; }
         public DbSet<Authors> Author { get; set; }
+
+        
     }
 }
