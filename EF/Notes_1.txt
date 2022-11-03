@@ -21,3 +21,6 @@ Lazy Loading : It is opposite of Eager Loading. The process of loading the relat
 3. Model First - create models in design mode, and classes are auto generated
 
 CRUD - Create, Read, Update, Delete
+
+
+CodeFirst Approach :
