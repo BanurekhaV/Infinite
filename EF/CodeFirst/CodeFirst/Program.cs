@@ -14,42 +14,45 @@ namespace CodeFirst
             var book = from b in bc.Books
                        select b;
 
-            foreach(var item in book)
+            foreach (var item in book)
             {
                 Console.WriteLine(item.BookId + " " + item.BookName);
             }
         }
 
-        static void UpdateBooks()
+        static void UpdateBooks(Book bkobj)
         {
-            var bk = bc.Books.FirstOrDefault(b => b.BookId == 3);
+            var bk = bc.Books.FirstOrDefault(b => b.BookId == bkobj.BookId);
 
-            bk.BookName = "Intro to Dot Net Programming";
+            bk.BookName = "My New Book";
             bc.SaveChanges();
             //for delete
             //bc.Books.Remove(bk);
             //bc.SaveChanges();       
-            
+
         }
-        static void Callproc()
-        {
-           // var blist=bc.
-        }
+        
         static void Main(string[] args)
         {
-            //UpdateBooks();
-            //ShowBooks();
-            Callproc();
-            //using(var db= new BookContext())
-            //{
-            //    db.Books.Add(new Book { BookName = "Introduction to EF" });
-            //    db.SaveChanges();
+            ShowBooks();
+            Console.WriteLine("----------------");
+            Book mybook = new Book() { BookId = 2 };
+            UpdateBooks(mybook);
+           
+            //Callproc();
+            using (var db = new BookContext())
+            {
+                db.Books.Add(new Book { BookName = "Introduction to EF" });
+                db.SaveChanges();
 
-            //    foreach(var bk in db.Books)
-            //    {
-            //        Console.WriteLine(bk.BookId + " "+ bk.BookName);
-            //    }
-            //}
+                //    foreach(var bk in db.Books)
+                //    {
+                //        Console.WriteLine(bk.BookId + " "+ bk.BookName);
+                //    }
+                //}                
+            }
+            Console.WriteLine("-----------------");
+            ShowBooks();
             Console.Read();
         }
     }
