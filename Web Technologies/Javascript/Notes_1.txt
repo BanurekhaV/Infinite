@@ -54,3 +54,10 @@ To use javascript, use <script>  </script>
 
 3. Inline java script(mostly used along with events)
 <a href="aa.html" onClick="alert("Hello aLL..)";>click me</a>
+
+
+Java Scripts Displays data as below
+1. window.alert()- a message dialog box
+2. document.write() - over writes all content in the page
+3. innerHTML() - writing into an html element
+4. console.log() - used in browsers debugging mode
