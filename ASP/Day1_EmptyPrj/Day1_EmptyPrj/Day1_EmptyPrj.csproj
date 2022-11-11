@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomForm.aspx" />
     <Content Include="FirstForm.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Valid.html" />
@@ -74,6 +75,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomForm.aspx.cs">
+      <DependentUpon>CustomForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomForm.aspx.designer.cs">
+      <DependentUpon>CustomForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FirstForm.aspx.cs">
       <DependentUpon>FirstForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
