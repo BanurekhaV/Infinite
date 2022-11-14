@@ -11,7 +11,7 @@ namespace Statemanagement
 {
 
 
-    public partial class PostBack
+    public partial class QueryDestination
     {
 
         /// <summary>
@@ -24,22 +24,13 @@ namespace Statemanagement
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txt1 control.
+        /// lbldata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt1;
-
-        /// <summary>
-        /// btnclick control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnclick;
+        protected global::System.Web.UI.WebControls.Label lbldata;
 
         /// <summary>
         /// Button1 control.
@@ -49,14 +40,5 @@ namespace Statemanagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

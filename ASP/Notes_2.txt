@@ -25,9 +25,31 @@ Client Side Techniques	    Server Side Techn.
 4. Query Strings
 
 
-ViewState : A variable not typecasted. Is a dictionary object that can store any data. 
-Any UDT can be stored.
-It is stored in the client side
-Can retain the state (values of the controls) across multiple post backs of the same page
+1. ViewState : A variable not typecasted. Is a dictionary object that can store any data. 
+-Any UDT(User Defined Type) can be stored.
+-It is stored in the client side
+-Can retain the state (values of the controls) across multiple post backs of the same page
 
 Note: In general all asp controls(<asp:>) have a default viewstate variable
+
+
+2. Hidden Field : is a control as a part of the tool box, which is not visible at the runtime
+-Through hiddenfields we can store the data
+-Like ViewStatate, Hidden fields can also maintain the state only within the sames page's postback
+
+Hidden field is a class, which has to be initialized and all members to be initialized. This can pose a load on the system, where as a viewstate is a variable that does not load the system. 
+
+When we need to maintain the state of many controls, use viewstate. In case we need to maintain the state of few controls, then we may use hidden fields
+
+3. Cookies : used when we want the data to be travelling between pages (across pages)
+
+are of 2 types
+		1. Persistant cookie ( uses a httpcookie object- collection of data)
+		2. non-persistant cookie (does not use any cookie object, instead stores directly into response and request objects)
+
+4. Query String- symbols like these are used ? %). It is an url which is visible on the address bar. hence no sensitive should be passes using query string. Small and not very sensitive data can be sent via query string.
+
+
+
+
+

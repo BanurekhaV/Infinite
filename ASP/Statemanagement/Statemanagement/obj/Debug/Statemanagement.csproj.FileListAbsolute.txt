@@ -1,3 +1,4 @@
+C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\Statemanagement.dll.config
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\Statemanagement.dll
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\Statemanagement.pdb
@@ -52,8 +53,6 @@ C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\roslyn\VBCSCompiler.exe
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\roslyn\VBCSCompiler.exe.config
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.csproj.AssemblyReference.cache
-C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.csproj.CopyComplete
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.dll
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.pdb

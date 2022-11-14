@@ -12,7 +12,7 @@ namespace Statemanagement
         int ClicksCount = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 txt1.Text = "0";
             }
@@ -36,6 +36,12 @@ namespace Statemanagement
             //every asp control has a viewstate variable that can maintain the state
             ClicksCount = Convert.ToInt32(txt1.Text)+1;
             txt1.Text = ClicksCount.ToString();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Label1.Text = Request.Cookies["data1"].Value + Request.Cookies["Data2"].Value;
+
         }
     }
 }
