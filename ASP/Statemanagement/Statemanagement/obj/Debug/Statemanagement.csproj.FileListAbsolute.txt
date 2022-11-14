@@ -56,3 +56,4 @@ C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\bin\Microsoft.CodeDom.Provi
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.csproj.CopyComplete
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.dll
 C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.pdb
+C:\Banu\Infinite\ASP\Statemanagement\Statemanagement\obj\Debug\Statemanagement.csproj.AssemblyReference.cache

@@ -15,6 +15,8 @@ Session_Events- initialize data that needs to be available only for that user se
 
 Http protocol is a stateless protocol
 
+Statemanagement : The ability to retain the state of the page(values in various controls).
+
 Manage the state in the application using techniques as below:
 
 Client Side Techniques	    Server Side Techn.
@@ -48,6 +50,19 @@ are of 2 types
 		2. non-persistant cookie (does not use any cookie object, instead stores directly into response and request objects)
 
 4. Query String- symbols like these are used ? %). It is an url which is visible on the address bar. hence no sensitive should be passes using query string. Small and not very sensitive data can be sent via query string.
+
+
+5. Session State:
+
+6. Application State: 
+
+Global.asax : is also knwon as ASP.Net application file
+
+
+Master Page: allows to create a consistent look and behaviour for all the pages of the application
+
+
+
 
 
 
