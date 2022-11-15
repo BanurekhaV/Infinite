@@ -56,3 +56,4 @@ C:\Banu\Infinite\ASP\PrjExceptions\PrjExceptions\obj\Debug\PrjExceptions.csproj.
 C:\Banu\Infinite\ASP\PrjExceptions\PrjExceptions\obj\Debug\PrjExceptions.csproj.CopyComplete
 C:\Banu\Infinite\ASP\PrjExceptions\PrjExceptions\obj\Debug\PrjExceptions.dll
 C:\Banu\Infinite\ASP\PrjExceptions\PrjExceptions\obj\Debug\PrjExceptions.pdb
+C:\Banu\Infinite\ASP\PrjExceptions\PrjExceptions\obj\Debug\PrjExceptions.csproj.AssemblyReference.cache

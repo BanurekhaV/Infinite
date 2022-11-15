@@ -15,6 +15,7 @@ namespace PrjExceptions
             //try
             //{
                 DataSet ds = new DataSet();
+            //to invoke the custom error page of 404 http status code
                Response.Redirect("Hello.aspx");
                 ds.ReadXml(Server.MapPath("~/Employees.xml"));
                 GridView1.DataSource = ds;
