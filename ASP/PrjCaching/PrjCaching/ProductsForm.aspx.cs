@@ -15,14 +15,15 @@ namespace PrjCaching
         {
             if (!IsPostBack)
             {
-                SqlConnection con = new SqlConnection("Data Source=LAPTOP-TJJ7D977;" +
-                    "Initial Catalog=InfiniteDB; Integrated Security=true");
-                SqlDataAdapter da = new SqlDataAdapter("spGetProducts", con);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                GridView1.DataSource = ds;
-                GridView1.DataBind();                
+                //SqlConnection con = new SqlConnection("Data Source=LAPTOP-TJJ7D977;" +
+                //    "Initial Catalog=InfiniteDB; Integrated Security=true");
+                //SqlDataAdapter da = new SqlDataAdapter("spGetProducts", con);
+                //da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                //DataSet ds = new DataSet();
+                //da.Fill(ds);
+                //GridView1.DataSource = ds;
+                //GridView1.DataBind();
+                GetProductByName("All");
             }
             //else
             //{
@@ -50,8 +51,8 @@ namespace PrjCaching
 
             DataSet ds = new DataSet();
             da.Fill(ds);
-            GridView2.DataSource = ds;
-            GridView2.DataBind();
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
         }
 
 

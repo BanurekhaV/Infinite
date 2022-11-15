@@ -12,14 +12,14 @@
             Select a product :<asp:DropDownList ID="Dpdown1" runat="server"
                 OnSelectedIndexChanged="Dpdown1_SelectedIndexChanged" AutoPostBack="True">
                 <asp:ListItem Text="All" Value="All"></asp:ListItem>
-                <asp:ListItem Text="Laptops" Value="laps">             
+                <asp:ListItem Text="Laptops" Value="Laptops">             
                 </asp:ListItem>
-                <asp:ListItem Text="Desktops" Value="desks"></asp:ListItem>
-                <asp:ListItem Text="Mobiles" Value="mob"></asp:ListItem>
-                <asp:ListItem Text="Tablet" Value="tab">
+                <asp:ListItem Text="Desktops" Value="Desktops"></asp:ListItem>
+                <asp:ListItem Text="Mobiles" Value="Mobile"></asp:ListItem>
+                <asp:ListItem Text="Tablet" Value="Tablet">
                     
                 </asp:ListItem>
-                <asp:ListItem Text="SmartWatches" Value="watch"></asp:ListItem>
+                <asp:ListItem Text="SmartWatches" Value="Smart Watch"></asp:ListItem>
                               </asp:DropDownList>
             <br />
             <br />
@@ -38,29 +38,14 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
             &nbsp;<br />
+            Server Time :
+            <asp:Label ID="lbltime" runat="server" ></asp:Label>
             <br />
             <br />
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="Empid" DataSourceID="SqlDataSource1">
-                <Columns>
-                    <asp:BoundField DataField="Empid" HeaderText="Empid" ReadOnly="True" SortExpression="Empid" />
-                    <asp:BoundField DataField="Empname" HeaderText="Empname" SortExpression="Empname" />
-                    <asp:BoundField DataField="Salary" HeaderText="Salary" SortExpression="Salary" />
-                    <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                    <asp:BoundField DataField="DeptId" HeaderText="DeptId" SortExpression="DeptId" />
-                    <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                </Columns>
-            </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:InfiniteDBConnectionString %>" SelectCommand="SELECT * FROM [Employee] WHERE ([DeptId] = @DeptId)">
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="GridView2" DefaultValue="1" Name="DeptId" PropertyName="SelectedValue" Type="Int32" />
-                </SelectParameters>
-            </asp:SqlDataSource>
             <br />
         </div>
         <p>
-            Server Time :
-            <asp:Label ID="lbltime" runat="server" ></asp:Label>
-        </p>
+            &nbsp;</p>
         <p>&nbsp;</p>
         <p>
             Client Time :
