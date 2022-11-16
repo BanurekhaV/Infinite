@@ -170,6 +170,8 @@
     <Content Include="Views\Data\Index.cshtml" />
     <Content Include="Views\Data\OfficeRules.cshtml" />
     <Content Include="Views\Data\TestData.cshtml" />
+    <Content Include="Views\Data\FirstRequest.cshtml" />
+    <Content Include="Views\Data\SecondRequest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -57,5 +57,11 @@ ViewData["Mydata"]="Hello World";
 and to access in the view
 @ViewData["Mydata"]
 
-TempData : 
+TempData : is a Dictionary Object.
+-Is Derived from TempDataDictionary class
+-It uses Session to store values internally
+-It can be alive for subsequent request. We can retain the state by using TempData.Keep() method for further requests
+-It is good to check for null before using Tempdata, to avoid runtime errors
+-It is most useful when we need to redirect to another page along with some information
+-It is used to transfer data/value/information from one controller to another.
 

@@ -72,7 +72,6 @@ C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\bin\System.Web.WebPages.Razor.xml
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\bin\Newtonsoft.Json.xml
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\bin\Antlr3.Runtime.pdb
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.csproj.AssemblyReference.cache
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.csproj.CopyComplete
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.dll

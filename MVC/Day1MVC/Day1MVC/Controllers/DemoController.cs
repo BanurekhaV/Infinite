@@ -12,7 +12,8 @@ namespace Day1MVC.Controllers
         // GET: Demo
         public ActionResult Index()
         {
-            return View();
+            List<string> str = TempData["store"] as List<string>
+;            return View(str);
         }
 
         //eg 1. Normal method

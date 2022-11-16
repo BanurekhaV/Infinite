@@ -40,5 +40,29 @@ namespace Day1MVC.Controllers
             //  return Redirect("Index"); //redirection to an action method of the same controller
             //return RedirectToAction("Index", "Demo"); //redirection to an action method of another controller
         }
+
+        //eg 3. using tempdata to retain values across requests
+        public ActionResult FirstRequest()
+        {
+            List<string> stationaries = new List<string>();
+            stationaries.Add("Pens");
+            stationaries.Add("Pencils");
+            stationaries.Add("Erasers");
+            stationaries.Add("Markers");
+
+            //create a tempdata and store the stationary list
+            TempData["store"] = stationaries;
+            TempData.Keep();
+            return View();
+        }
+
+        //action method where we want to display the stationaries
+        public ActionResult SecondRequest()
+        {
+            List<string> stnlist = TempData["store"] as List<string>;
+            TempData.Keep();
+            // return View(stnlist);
+            return RedirectToAction("Index", "Demo");
+        }
     }
 }
