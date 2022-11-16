@@ -4,8 +4,10 @@
 }
 
 <h2>ViewMethod</h2>
-@foreach(var item in Model)
-            {
-                <p>@item</p>
-            }
+@* Using the razor syntax to diplay the elements in the collection object passed 
+    by the controllers action method to this view*@
+    @foreach(var item in Model)
+                {
+                    <p>@item</p>
+                }
 
