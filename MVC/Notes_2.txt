@@ -65,3 +65,7 @@ TempData : is a Dictionary Object.
 -It is most useful when we need to redirect to another page along with some information
 -It is used to transfer data/value/information from one controller to another.
 
+
+Model Binding : 
+ Binding a model to the view using @model
+
