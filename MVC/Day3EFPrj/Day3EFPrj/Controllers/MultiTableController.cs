@@ -35,13 +35,25 @@ namespace Day3EFPrj.Controllers
             return View();
         }
 
-        //create - passing data from view to controller using parameters
-        [HttpPost]
-        public ActionResult Create(int RegionID, string RegionDescription)
+        //create Post 1- passing data from view to controller using parameters
+        //[HttpPost]
+        //public ActionResult Create(int RegionID, string RegionDescription)
+        //{
+        //    Region r = new Region();
+        //    r.RegionID = RegionID;
+        //    r.RegionDescription = RegionDescription;
+        //    db.Regions.Add(r);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
+
+        //create Post 2 - passing data from view to controller using request object
+        [HttpPost, ActionName("Create")]
+        public ActionResult CreatePost()
         {
             Region r = new Region();
-            r.RegionID = RegionID;
-            r.RegionDescription = RegionDescription;
+            r.RegionID = Convert.ToInt32(Request["RegionID"]);
+            r.RegionDescription = Request["RegionDescription"].ToString();
             db.Regions.Add(r);
             db.SaveChanges();
             return RedirectToAction("Index");
