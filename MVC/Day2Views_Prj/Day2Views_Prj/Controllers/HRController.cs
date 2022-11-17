@@ -19,16 +19,17 @@ namespace Day2Views_Prj.Controllers
             deptlist.Add(new Department { Did = 30, Deptname = "IT" });
             deptlist.Add(new Department { Did = 40, Deptname = "EEE" });
             return View("DepartmentList",deptlist);
+           // return View(deptlist);
         }
 
-        //eg : 1. View Data based on a Model
+        //eg : 1. View Data based on a Model object
         public ActionResult DisplayEmployee()
         {
             Employee employee = new Employee() { Eid = 100, Ename = "Monisha", Salary = 45000 };
             return View(employee);
         }
 
-        //eg 2. View based on a list of employee
+        //eg 2. View based on a list of employee object
         public ActionResult EmployeeList()
         {
             List<Employee> emplist = new List<Employee>()
@@ -46,6 +47,26 @@ namespace Day2Views_Prj.Controllers
         public ActionResult DepartmentList(List<Department> dlist)
         {
             return View(dlist);
+        }
+
+        //eg. 4 calling view of another controller
+        public ActionResult CallAbout_OfHome()
+        {
+            return View("~/Views/Home/About.cshtml");           
+        }
+
+        //eg 5. calling action method of another controller
+        public ActionResult Actionmethod_anothercontroller()
+        {
+             return RedirectToAction("About", "Home");
+        }
+
+        //eg 6. Renaming a view of an action method
+        [ActionName("ShowData")]
+        public ActionResult TestMethod()
+        {
+            // return View("TestMethod"); // if view name is different from action name
+            return View(); //if the view name is same as that of an action name
         }
     }
 }
