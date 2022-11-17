@@ -49,5 +49,28 @@ namespace Day3EFPrj.Controllers
             return View(catname);
         }
         
+        //CRUD operations with Category Object
+
+        //1. inserting a new record
+       [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+       [HttpPost]
+        public ActionResult Create(Category c)
+        {
+            db.Categories.Add(c);
+            db.SaveChanges();
+            return RedirectToAction("GetCategoryScaffolded");
+        }
+
+        //2. Get Details of a category Id
+        public ActionResult Details(int id)
+        {
+            Category cat = db.Categories.Find(id);
+            return View(cat);
+        }
     }
 }

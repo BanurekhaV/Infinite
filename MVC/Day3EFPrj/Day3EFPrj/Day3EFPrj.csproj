@@ -264,6 +264,8 @@
     <Content Include="Views\Category\GetCategoryScaffolded.cshtml" />
     <Content Include="Views\Category\GetCat_ByName.cshtml" />
     <Content Include="Views\Category\GetCat_ByMethod.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
