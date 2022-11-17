@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MultiTableController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -266,6 +267,11 @@
     <Content Include="Views\Category\GetCat_ByMethod.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\MultiTable\Index.cshtml" />
+    <Content Include="Views\MultiTable\CustEmp_Ord_Details.cshtml" />
+    <Content Include="Views\MultiTable\Proc_Expensive_Products.cshtml" />
+    <Content Include="Views\MultiTable\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,6 +20,7 @@ HTTP Verbs :
 Passing Data from Views to the Controllers
 ------------------------------------------
  1. Model Object
- 2. Forms Object
- 3. Request Object
- 4. Parameters -(parameter names should match the column names at the backend)
+ 2. Parameters -(parameter names should match the column names at the backend)
+ 3. Forms Object
+ 4. Request Object
+ 

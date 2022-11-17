@@ -72,5 +72,32 @@ namespace Day3EFPrj.Controllers
             Category cat = db.Categories.Find(id);
             return View(cat);
         }
+
+       // 3. Edit category
+       [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Category cat = db.Categories.Find(id);
+            return View(cat);
+        }
+
+        //post of edit
+        public ActionResult Edit(Category c)
+        {
+            Category cat = db.Categories.Find(c.CategoryID);//getting before update -data
+            cat.CategoryName = c.CategoryName;
+            cat.Description = c.Description;
+            db.SaveChanges();
+            return RedirectToAction("GetCategoryScaffolded");
+        }
+
+        //delete a category
+        public ActionResult Delete(int id)
+        {
+            Category c = db.Categories.Find(id);
+            db.Categories.Remove(c);
+            db.SaveChanges();
+            return RedirectToAction("GetCategoryScaffolded");
+        }
     }
 }
