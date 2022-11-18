@@ -14,3 +14,6 @@ float marks
 datetime dob;
 string[] cities{"a","b","c"}
 }
+
+Model Validations: Using anotations/Attributes/Decorators
+
