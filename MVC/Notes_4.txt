@@ -1,0 +1,16 @@
+using Simple basic Html Helpers, we shall create a view 
+
+Standard Helpers 
+Strongly Typed Helpers
+  LabelFor
+  LabelForModel
+Custom Helpers
+
+class student{
+
+int Id
+string name
+float marks
+datetime dob;
+string[] cities{"a","b","c"}
+}

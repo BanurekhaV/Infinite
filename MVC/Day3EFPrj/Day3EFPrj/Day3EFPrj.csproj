@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MultiTableController.cs" />
+    <Compile Include="Controllers\ShippersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -272,6 +273,8 @@
     <Content Include="Views\MultiTable\CustEmp_Ord_Details.cshtml" />
     <Content Include="Views\MultiTable\Proc_Expensive_Products.cshtml" />
     <Content Include="Views\MultiTable\Create.cshtml" />
+    <Content Include="Views\Shippers\Index.cshtml" />
+    <Content Include="Views\Shippers\CreateShipper.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
