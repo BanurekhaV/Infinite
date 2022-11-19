@@ -17,8 +17,8 @@ namespace Modelvalidations_Prj.CustomClasses
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             DateTime entered_dob = Convert.ToDateTime(value);
-            DateTime mindt = Convert.ToDateTime("01-25-1970");
-            DateTime maxdt = Convert.ToDateTime("01-25-1990");
+            DateTime mindt = Convert.ToDateTime("25/01/1970");
+            DateTime maxdt = Convert.ToDateTime("25/01/1990");
             if (entered_dob >= mindt && entered_dob <= maxdt)
                 return ValidationResult.Success;
             else
@@ -42,8 +42,12 @@ namespace Modelvalidations_Prj.CustomClasses
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             List<CheckBox> skills_selected = value as List<CheckBox>;
-            if (skills_selected.Count >= 3)
+            int count = skills_selected == null ? 0 : (from s in skills_selected
+                                                       where s.IsChecked == true
+                                                       select s).Count();
+            if(count>=3)
                 return ValidationResult.Success;
+
             else
                 return new ValidationResult(ErrorMessage);
                     
