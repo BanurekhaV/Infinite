@@ -29,7 +29,7 @@ namespace HtmlHelpersPrj.Controllers
 
         //3. Template helper 2
 
-        public ActionResult TemplateHelper2()
+        public ActionResult ForModel()
         {
             return View();
         }

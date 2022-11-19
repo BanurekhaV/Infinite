@@ -1,5 +1,3 @@
-C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\obj\Debug\HtmlHelpersPrj.csproj.AssemblyReference.cache
-C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\obj\Debug\HtmlHelpersPrj.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\bin\HtmlHelpersPrj.dll.config
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\bin\HtmlHelpersPrj.dll
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\bin\HtmlHelpersPrj.pdb
@@ -74,6 +72,8 @@ C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\bin\System.Web.WebPages.Razor
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\bin\Newtonsoft.Json.xml
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\bin\Antlr3.Runtime.pdb
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\obj\Debug\HtmlHelpersPrj.csproj.AssemblyReference.cache
+C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\obj\Debug\HtmlHelpersPrj.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\obj\Debug\HtmlHelpersPrj.csproj.CopyComplete
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\obj\Debug\HtmlHelpersPrj.dll
 C:\Banu\Infinite\MVC\HtmlHelpersPrj\HtmlHelpersPrj\obj\Debug\HtmlHelpersPrj.pdb
