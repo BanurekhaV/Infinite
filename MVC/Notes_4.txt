@@ -15,5 +15,16 @@ datetime dob;
 string[] cities{"a","b","c"}
 }
 
-Model Validations: Using anotations/Attributes/Decorators
-
+Model Validations: Are a means to validate data at the server side. 
+In Asp.Net MVC, we can do server side validations on the model using Data Annotations.
+Data Anotation is a namespace that provides various attribute classes, which define metadata for controls.
+-So we decorate the properties of the Model with these attribute classes
+-Some attribute classes are
+  Required
+  RegularExpression
+  Range
+  DataType
+  EmailAddress
+  Phone
+  StringLength
+-In case we need to do custom validations of a control, then we can create our own custom validation attribute

@@ -10,7 +10,7 @@ namespace Day4Prj.Models
 {
     public class Employee
     {
-        [Required]    //(ErrorMessage ="User name is a Must")]
+        [Required]   //(ErrorMessage ="User name is a Must")]
         [Display(Name ="Employee Name",Prompt ="Enter Employee name")]
         public string UserName { get; set; }
         [Required]
@@ -21,11 +21,11 @@ namespace Day4Prj.Models
         [Compare("Password",ErrorMessage ="Password does not match")]
         public string ConfirmPassword { get; set; }
         [Required(ErrorMessage ="Please Enter Email")]
-        [Display(Name ="EmailID")]
-        [RegularExpression(@"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$",
-            ErrorMessage ="Enter Email in Correct Format")]
+        [Display(Name ="Email ID")]
+        //[RegularExpression(@"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$",
+           // ErrorMessage ="Enter Email in Correct Format")]
         public string Email { get; set; }
-        [Range(21,58,ErrorMessage =(""))]
+        [Range(21,58,ErrorMessage =("Age Should Be Between 21 and 58 only"))]
         public int Age { get; set; }
     }
 }
