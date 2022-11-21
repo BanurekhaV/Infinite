@@ -5,7 +5,7 @@ It is an architectural pattern used for data exchange over a distributed environ
 It works solely on HTTP based services.
 
 Get
-Post
+Post -FromBody or FromURL
 Put- update all columns/data
 Patch - update few data/columns
 Delete 1. soft delete, where we need to update a column like status/remarks etc
@@ -29,4 +29,10 @@ The REST Pattern specifies a set of constraints
 
 5. Content Negotiation : Client ha sthe ability to dcide in which format it wants the response (XML/JSON)
 
-6. Layered System: 
+6. Layered System: Having the UI, Businees Logic, Data Access logic all seperated either as different folders/applications
+
+
+Attribute Routing : is a customized way to access action methods inside a controller
+
+The entry in the routing table will be made with the route name rather the http verb name
+

@@ -78,7 +78,6 @@ C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\bin\System.Web.WebPages.Deploym
 C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\bin\System.Web.WebPages.Razor.xml
 C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\bin\Antlr3.Runtime.pdb
 C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\obj\Debug\WEBAPI_Prj1.csproj.AssemblyReference.cache
 C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\obj\Debug\WEBAPI_Prj1.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\obj\Debug\WEBAPI_Prj1.csproj.CopyComplete
 C:\Banu\Infinite\WEB API\WEBAPI_Prj1\WEBAPI_Prj1\obj\Debug\WEBAPI_Prj1.dll
