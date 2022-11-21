@@ -15,4 +15,12 @@
     @CustomHelper.LabelWithMark("Static Helper")
 
 </p>
-
+<hr/>
+<h1>Helper Razor</h1>
+@helper LabelwithRazor(string Content)
+    {
+      <label><b><del><sup>@Content</sup></del></b></label>
+    }
+<p>
+    @LabelwithRazor("This is Razor Syntax Helper")
+</p>
