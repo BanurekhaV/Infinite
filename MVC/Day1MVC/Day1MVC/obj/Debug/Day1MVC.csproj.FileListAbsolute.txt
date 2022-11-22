@@ -76,3 +76,4 @@ C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.csproj.CoreCompileInputs.
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.csproj.CopyComplete
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.dll
 C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.pdb
+C:\Banu\Infinite\MVC\Day1MVC\Day1MVC\obj\Debug\Day1MVC.csproj.AssemblyReference.cache

@@ -9,6 +9,7 @@ namespace Day1MVC.Controllers
     public class DataController : Controller
     {
         // GET: Data
+       
         public ActionResult Index()
         {
             return View();
