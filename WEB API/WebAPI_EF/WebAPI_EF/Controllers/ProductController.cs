@@ -30,7 +30,7 @@ namespace WebAPI_EF.Controllers
                 QtyAvailable=p.QtyAvailable,
             });
             db.SaveChanges();
-            return Ok(p);
+            return Ok("Success");
         }
     }
 }
