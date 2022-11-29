@@ -31,5 +31,18 @@ namespace Staticfiles_Prj.Controllers
             ViewBag.mobilebag = mobiles;
             return View();
         }
+
+        public ContentResult Data()
+        {
+            return Content("<h1>This is Data Content</h1>", "text/html");
+        }
+
+        public IActionResult GetJson()
+        {
+            Person p = new Person();
+            p.ID = 1;
+            p.Name = "Varshini";
+            return Json(p);
+        }
     }
 }
