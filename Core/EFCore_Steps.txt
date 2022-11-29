@@ -1,0 +1,35 @@
+EF
+
+Packages to be included
+Microsoft.EntityFrameworkCore  (5.0.0)
+Microsoft.EntityFrameworkCore.Relational
+Microsoft.EntityFrameworkCore.SqlServer 
+
+Note: If we just instal the last sqlserver package, the remaining 2 packages are added by default due to dependencies
+
+Microsoft.EntityFrameworkCore.Tools( This is to enable models/context etc in the absence of ADOEntityDataModel wizard
+
+For MVC Application : we need to include another package called
+Microsoft.EntityFrameworkCore.Design
+
+--To verify if all packages are installed succesfully
+type --dotnet ef in the PM console
+
+
+
+For Database First Approach: Give an existing database name and other connection details in the appsettings.json file, and then in the PMConsole type the below command which will map all tables into objects
+
+
+Scaffold-DbContext "Server=LAPTOP-TJJ7D977;Database=InfiniteDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models
+
+appsettings: after allowedHosts 
+
+"AllowedHosts": "*",
+  "ConnectionStrings": {
+    "InfiniteDBConnection": "Server=LAPTOP-TJJ7D977;Database=InfiniteDB;Trusted_Connection=True;"
+  },
+}
+
+Whenever there are any changes made to the tables, then retype the below command with -Force option
+
+Scaffold-DbContext "Server=LAPTOP-TJJ7D977;Database=InfiniteDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models -F
