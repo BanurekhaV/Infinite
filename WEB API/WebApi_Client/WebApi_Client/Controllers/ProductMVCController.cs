@@ -6,7 +6,8 @@ using System.Web.Mvc;
 using WebApi_Client.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
-
+using System.Net;
+using System.Threading.Tasks;
 
 namespace WebApi_Client.Controllers
 {
@@ -66,6 +67,61 @@ namespace WebApi_Client.Controllers
             ModelState.AddModelError(string.Empty, "Some Error Occured..");
             return View(prod);
         }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            if (id == 0)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            MVCProductModel product = null;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://localhost:44387/api/");
+
+                var responsetask = client.GetAsync("product/"+id).Result;
+                
+                if (responsetask.IsSuccessStatusCode)
+                {
+                    var resultdata = responsetask.Content.ReadAsStringAsync().Result;
+                    product = JsonConvert.DeserializeObject<MVCProductModel>(resultdata);
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Server error try after some time.");
+                }
+            }
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View(product);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit([Bind(Include = "ProductID,ProdName,Price,QtyAvailable")] MVCProductModel product)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:44387/api/");
+                    var response = await client.PutAsJsonAsync("product/edit", product);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("Display");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Server error try after some time.");
+                    }
+                }
+                return RedirectToAction("Index");
+            }
+            return View(product);
+        }
+
 
     }
 }
